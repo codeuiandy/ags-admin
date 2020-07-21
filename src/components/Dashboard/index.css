@@ -1,0 +1,106 @@
+#app {
+	width: 100%;
+	height: fit-content;
+	background-color: white;
+	border-radius: 5px;
+	padding: 20px;
+	padding-left: 40px;
+}
+
+.headerDashBoard h1 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 16px;
+	letter-spacing: 0.01em;
+	color: #6a707e;
+}
+
+.headerDashBoard h1 span {
+	color: orange;
+}
+
+.dashbordOverview {
+	display: flex;
+	width: 100%;
+}
+
+.dashbordOverview .overviewWrap {
+	margin-right: auto;
+}
+
+.dashbordOverview .overviewWrap h1 {
+	margin-bottom: 2px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: #151522;
+}
+
+.dashbordOverview .overviewWrap hr {
+	width: 286px;
+	border: 1px solid #999999;
+}
+
+.dashbordOverview .overviewWrap span {
+	margin-right: 10px;
+	color: #999999;
+}
+
+.staticticsOverView {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.staticticsOverView div {
+	margin-right: 80px;
+	margin-top: 10px;
+}
+
+.staticticsOverView div h1 {
+	margin-bottom: 0;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	color: #151522;
+}
+
+.staticticsOverView div h1::before {
+	content: "";
+	/* padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 5px; */
+	background-color: red;
+}
+
+.staticticsOverView div h2 {
+	margin-top: 0;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	color: #151522;
+}
+.apexcharts-toolbar {
+	display: none !important;
+}
+.responsiveChart {
+	width: 95%;
+	height: 300px;
+	margin-bottom: 300px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1166px) {
+	.dashbordOverview .overviewWrap hr {
+		width: auto;
+	}
+}
+
+@media (max-width: 638px) {
+	.dashbordOverview {
+		display: none;
+	}
+}
