@@ -197,7 +197,7 @@ class Statictics extends React.Component {
 		return (
 			<div className="responsiveChart">
 				{" "}
-				<LineChart data={this.state.data} options={options} />
+				<LineChart data={this.state.data} />
 			</div>
 		);
 	}

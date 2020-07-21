@@ -5,6 +5,7 @@
 	border-radius: 5px;
 	padding: 20px;
 	padding-left: 40px;
+	overflow: hidden;
 }
 
 .headerDashBoard h1 {
@@ -88,7 +89,116 @@
 .responsiveChart {
 	width: 95%;
 	height: 300px;
-	margin-bottom: 300px;
+	padding-bottom: 300px;
+}
+.recents {
+	display: grid;
+	grid-template-areas:
+		"introGrid1 introGrid2"
+		"main  grid2 "
+		"main   grid3";
+	grid-gap: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.introGrid1 {
+	grid-area: introGrid1;
+	font-weight: 600;
+	font-size: 20px;
+	color: #151522;
+}
+
+.introGrid2 {
+	grid-area: introGrid2;
+	font-weight: 600;
+	font-size: 20px;
+	color: #151522;
+}
+.recents .recents1 {
+	background-color: white;
+	width: 60vw;
+	height: 300px;
+	grid-area: main;
+	border-radius: 10px;
+}
+
+.recents .recents2 {
+	background-color: white;
+	width: 230px;
+
+	height: 150px;
+	grid-area: grid2;
+	border-radius: 5px;
+}
+.recents .recents3 {
+	background-color: white;
+	width: 230px;
+	height: 150px;
+	grid-area: grid3;
+	border-radius: 5px;
+}
+.innerUpdates div {
+	margin: 5px;
+	padding: 5px;
+}
+
+.recentMain {
+	display: flex;
+}
+
+.recentMain div {
+	white-space: nowrap;
+	color: #707683;
+	font-size: 17px;
+}
+
+.recentMain span {
+	white-space: nowrap;
+	margin-left: auto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 18px;
+	/* identical to box height */
+
+	letter-spacing: 0.01em;
+
+	/* table_gray */
+
+	color: #707683;
+}
+
+.eventR {
+	display: flex;
+}
+
+.eventR img {
+	width: 50%;
+	height: 140px;
+	margin: 5px;
+}
+.about-event span {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.01em;
+
+	/* table_gray */
+
+	color: #707683;
+}
+
+.about-event div {
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: 0.01em;
+
+	/* table_gray */
+
+	color: #707683;
+	margin-top: 6px;
 }
 
 /* RESPONSIVE DESIGN */

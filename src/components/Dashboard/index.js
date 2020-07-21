@@ -3,6 +3,7 @@ import "./index.css";
 import OVERVIEW from "./overview";
 import StaticticsOVERVIEW from "./staticticsOverview";
 import Statictics from "./statictics";
+import Recents from "./recents";
 export default class index extends Component {
 	render() {
 		return (
@@ -18,6 +19,7 @@ export default class index extends Component {
 					<StaticticsOVERVIEW />
 					<Statictics />
 				</div>
+				<Recents />
 			</React.Fragment>
 		);
 	}
