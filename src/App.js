@@ -5,6 +5,7 @@ import "./App.css";
 import Layout from "./components/Layout/index";
 import Dashboard from "./components/Dashboard/index";
 import CreateEvent from './components/Events/CreateEvent'
+import EventList from './components/Events/eventList'
 function App() {
 	return (
 		<div className="App">
@@ -21,7 +22,8 @@ function App() {
 
 				
 						<Route exact path="/create_event" component={CreateEvent} />
-					
+						<Route exact path="/event_list" component={EventList} />
+						
 				</Switch>
 			</Router>
 		</div>
