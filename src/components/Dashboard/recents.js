@@ -51,16 +51,22 @@ export default class recents extends Component {
 							<div className="about-event">
 								<span>Ladies Night</span>
 								<div>320 Members</div>
+								<p className="eventDate">
+									21/Jan/2023
+								</p>
 							</div>
 						</div>
 					</div>
 					<div className="recents3">
-						<div className="recents2">
+						<div className="recentsE">
 							<div className="eventR">
 								<img src={env} alt="" />
 								<div className="about-event">
 									<span>Ladies Night</span>
 									<div>320 Members</div>
+									<p className="eventDate">
+									21/Jan/2023
+								</p>
 								</div>
 							</div>
 						</div>

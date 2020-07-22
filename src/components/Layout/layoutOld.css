@@ -4,6 +4,9 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 }
+*{
+	margin-left: 20px;
+}
 
 .centra-margin {
 	background-color: red;
