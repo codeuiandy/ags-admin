@@ -47,7 +47,7 @@ body {
 
 .navRoutes span {
 	text-decoration: none;
-	color: #fffeff;
+	color: #334D6E;
 	font-weight: 600;
 }
 
@@ -90,16 +90,21 @@ body {
 .sidebarList {
 	margin-top: 35px;
 	list-style-type: none;
+	margin-left: 20px;
 }
 
 .sidebarList li {
 	margin-bottom: 17px;
 	cursor: pointer;
-	color: #fffeff;
-	font-size: 14px;
+	color: #334D6E;
+	font-size: 16px;
 	margin-left: -35px !important;
 }
-
+.sidebarList li i{
+	margin-right: 10px;
+	font-size: 15px;
+}
+/* 
 .sidebarList li:first-child {
 	font-weight: 600;
 	margin-bottom: 17px;
@@ -107,7 +112,7 @@ body {
 	margin-left: -35px !important;
 	color: #fffeff;
 	font-size: 17px;
-}
+} */
 
 /* RESPONSIVENESS */
 

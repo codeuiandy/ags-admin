@@ -4,10 +4,12 @@ import OVERVIEW from "./overview";
 import StaticticsOVERVIEW from "./staticticsOverview";
 import Statictics from "./statictics";
 import Recents from "./recents";
+import Layout from '../Layout/index'
 export default class index extends Component {
 	render() {
 		return (
 			<React.Fragment>
+				<Layout>
 				<div className="headerDashBoard">
 					<h1>
 						User <span>Overview</span>
@@ -20,6 +22,7 @@ export default class index extends Component {
 					<Statictics />
 				</div>
 				<Recents />
+				</Layout>
 			</React.Fragment>
 		);
 	}
