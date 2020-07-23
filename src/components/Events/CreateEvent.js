@@ -12,6 +12,7 @@ export default class CreateEvent extends Component {
             eventType:"free"
         }
     }
+    
     eventType=(paid)=>{
 if (paid === "paid") {
     this.setState({eventType:"paid"})
@@ -22,6 +23,7 @@ if (paid === "free") {
 }
     }
     render() {
+      console.log(this.state.startDate)
         return (
             <div>
                 <Layout>

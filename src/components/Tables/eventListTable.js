@@ -57,22 +57,36 @@ export default class eventListTable extends Component {
 
 			action: (
 				<a>
-					<Link to="/payroll-form">
+					<Link to="/view_event">
 						{" "}
 						<span
 							className="edit"
-							style={{ color: " #0D0D0D", fontSize: "16px" }}
+							style={{ color: " #0D0D0D", fontSize: "14px" }}
 							// onClick={() => this.props.handleEdit(data.id)}
 							// data-backdrop="static"
 							className="fa fa-eye mr-4 add-cursor"
 						></span>
 					</Link>
 
+					<Link to="">
+						{" "}
+						<span
+							className="edit"
+							style={{ color: " #0D0D0D", fontSize: "14px" }}
+							// onClick={() => this.props.handleEdit(data.id)}
+							// data-backdrop="static"
+							className="fa fa-eraser mr-4 add-cursor"
+						></span>
+					</Link>
+				
+
+
 					<span
-						style={{ color: " #F00A0A", fontSize: "16px" }}
-						className="del"
+						style={{ color: " #F00A0A", fontSize: "14px",cursor:"pointer" }}
+					
 						// onClick={() => this.props.handleDelete(data.id)}
 						className="fa fa-trash mr-4 add-cursor"
+						data-toggle="modal" data-target="#ComfirmModal"
 					></span>
 				</a>
 			),

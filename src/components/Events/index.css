@@ -204,3 +204,219 @@ font-weight: 500;
     border: 1px solid #516884 !important;
     width: 60px;
 }
+
+.confirmWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.confirmWrapper button{
+    width: 120px;
+    margin: 10px;
+}
+
+.confirmWrapper p{
+  font-weight: 600;
+}
+
+.view-event{
+    display: flex;
+   
+    flex-direction: column;
+    width: 50vw;
+}
+
+.view-event h1{
+    justify-self: center;
+    align-self: center;
+    font-size: 25px;
+margin: 0;
+color: #151522;
+
+}
+
+
+.view-event img{
+    width: 100%;
+    height: 140px;
+    border: 1px solid #E4E4E4;
+box-sizing: border-box;
+background-repeat: no-repeat;
+margin-top: 20px;
+}
+
+.aboutEvent h1{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #2F2E41;
+    font-weight: bold;
+
+}
+
+.aboutEvent p{
+    font-size: 16px;
+    margin-top: 5px;
+    
+    color: #2F2E41;
+  
+    
+}
+
+
+.evenTiming{
+    display: grid;
+    grid-template-areas: "evt1 evt2"
+                              "evt3 evt4";
+                              justify-content: space-between;
+                              align-items: center;
+}
+
+.evenTiming h1{
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #2F2E41;
+    font-weight: bold;
+}
+
+.evenTiming p{
+    color: #2F2E41;
+font-size: 15px;
+}
+
+.eventTiming1{
+    grid-area: evt1;
+}
+
+.eventTiming2{
+    grid-area: evt2;
+}
+
+.eventTiming3{
+    grid-area: evt3;
+}
+
+.eventTiming4{
+    grid-area: evt4;
+}
+
+.evenStatictics{
+    display: flex;
+    flex-direction: column;
+}
+
+.evenStatictics h1{
+    justify-self: center;
+    align-self: center;
+    font-size: 21px;
+margin-top: 40px;
+color: #151522;
+
+}
+
+.evenStatictics h2{
+   
+    font-size: 18px;
+margin-top: 40px;
+color: #2F2E41;
+
+}
+
+.viewEventOverView{
+    width: 100%;
+    background: #FFFFFF;
+border: 1px solid #C2CFE0;
+box-sizing: border-box;
+padding: 0px 20px 0px 20px;
+}
+
+.santictic-nums{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.santictic-nums div h1{
+    margin-top: 0;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.santictic-nums div p{
+    margin-top: 0;
+ 
+    font-size: 16px;
+}
+
+
+.box {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 20px;
+
+}
+
+.box .percentage {
+	position: relative;
+	width: 150px;
+	height: 150px;
+}
+
+.box .percentage svg {
+	position: relative;
+	width: 150px;
+	height: 150px;
+}
+
+.box .percentage svg circle {
+	width: 150px;
+	height: 150px;
+	fill: none;
+	stroke-width: 10;
+	stroke: #000;
+	transform: translate(5px, 5px);
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+	stroke-linecap: round;
+}
+
+.box .percentage svg circle:nth-child(1) {
+	stroke-dashoffset: 0;
+	stroke: #F2F2F2;
+}
+
+.box .percentage svg circle:nth-child(2) {
+	animation: all 1s ease-in forwards;
+}
+
+.box .percentage .atendeNumber {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    color: black;
+    
+}
+
+.box .percentage .atendeNumber h2 {
+	font-weight: 600;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 27px;
+	line-height: 48px;
+	/* identical to box height */
+	color: rgba(13, 13, 13, 0.8);
+}
