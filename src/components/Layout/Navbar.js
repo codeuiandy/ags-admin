@@ -9,10 +9,8 @@ export default class Navbar extends Component {
 					<nav className="navRoutes">
 						<span className="appLogo"></span>
 						<div className="navItems">
-							<span className="linkNav">Projects</span>
-							<span className="linkNav">Hire Me</span>
-							<span className="linkNav">Github</span>
-							<span className="linkNav">Learn How To Code</span>
+							<span className="linkNav"><i class="fas fa-bell"></i></span>
+							
 						</div>
 
 						<div className="toggleEl">
