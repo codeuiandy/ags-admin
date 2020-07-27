@@ -9,7 +9,7 @@ export default class index extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Layout>
+				<Layout page="dashboard">
 				<div className="headerDashBoard">
 					<h1>
 						User <span>Overview</span>

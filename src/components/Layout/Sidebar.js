@@ -6,6 +6,7 @@ export default class Sidebar extends Component {
 		this.state={
 			dropDown:true
 		}
+		console.log(this.props)
 	}
 	dropDown=(events)=>{
 		let dropDown = this.state.dropDown
@@ -28,12 +29,12 @@ if (events==="events") {
 					<div className={`sidebar`}>
 						<ul className="sidebarList">
 						
-							<li><i class="fas fa-align-justify"></i> Dashboard</li>
+							<li className={`${this.props.page==="dashboard"?"activeClass":""}`}><i class="fas fa-align-justify"></i> Dashboard</li>
 							<li onClick={(e)=>this.dropDown('events')}><i class="far fa-calendar-alt"></i> Events</li>
 							{this.state.dropDown===true?
 							
 							<ul className="dropdownlist">
-								<li>OverView</li>
+								<li >OverView</li>
 								<li>Create Event</li>
 								<li>Event List</li>
 							</ul>

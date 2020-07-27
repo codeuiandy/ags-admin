@@ -10,6 +10,7 @@ export default class index extends Component {
 			sidebarShow: "",
 			showBar: false,
 		};
+		console.log(this.props)
 	}
 	toggleSideBar = () => {
 		let showBar = this.state.showBar;
@@ -33,7 +34,7 @@ export default class index extends Component {
 			<div>
 				<div>
 					<Navbar handleSideBar={this.toggleSideBar} />
-					<Sidebar sidebarShow={sidebarShow} SidebarDefault={SidebarDefault} />
+					<Sidebar page={this.props.page} sidebarShow={sidebarShow} SidebarDefault={SidebarDefault} />
 					<div className="centra-margin">{this.props.children}</div>
 				</div>
 			</div>

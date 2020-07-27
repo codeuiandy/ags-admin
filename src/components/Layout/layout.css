@@ -189,3 +189,7 @@ body {
 		margin: 0 !important;
 	}
 }
+
+.activeClass{
+	color: orange !important;
+}

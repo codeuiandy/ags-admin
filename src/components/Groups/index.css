@@ -1,0 +1,391 @@
+.grps-wraper{
+    width: 70vw;
+    background-color: white;
+}
+.grp-overview-table{
+    width: 80vw;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.grp-overview{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+    grid-template-rows: 150px;
+    grid-gap: 1rem;
+    grid-auto-flow: dense;
+    justify-content: space-between;  
+    width: 80vw;
+    margin-bottom: 10px;
+    
+}
+
+.grp-overview div{
+    background: #FFFFFF;
+    box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    width: 185px;
+height: 110px;
+margin-top: 25px;
+filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.267))
+}
+
+.grp-overview1 {
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+}
+
+.grp-overview1 h1{
+    font-weight: 600;
+font-size: 17px;
+margin-top: 20px;
+
+/* text */
+
+color: #334D6E;
+}
+
+.grp-overview1 h1 i{
+ margin-right: 5px;
+}
+
+.grp-overview1 p{
+    font-weight: 600;
+font-size: 16px;
+margin-top: 10px;
+
+/* text */
+
+color: #334D6E;
+}
+
+.create-grp{
+    display: grid;
+    width: 70vw;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    grid-template-areas: "createGrp1 createGrp2"
+                          "createGrp3 createGrp4"
+                          '. button   ';
+                          grid-template-rows: 130px 1fr 70px;
+                          padding-bottom: 40px;
+
+}
+
+.grp1{
+    grid-area: createGrp1;
+  
+    width: 300px;
+    
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grp1 label{
+    font-weight: 600;
+    color: #334D6E;
+}
+
+.grp1 input{
+    width: 100%;
+height: 58px;
+border: 1px solid #C4C4C4;
+border-radius: 5px;
+}
+
+.grp2{
+    grid-area: createGrp2;
+  
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    display: flex;
+}
+
+.grp3{
+    grid-area: createGrp3;
+    
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    position: relative;
+    border: 1px dashed #C4C4C4;
+box-sizing: border-box;
+border-radius: 4px;
+}
+
+.grp3 input{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.grp3 .getGrpImg{
+    position: absolute;
+    top: 25%;
+    left: 50px;
+z-index: 0 !important;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.grp3 .getGrpImg p{
+    position: relative;
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.01em;
+
+color: #334D6E;
+
+
+}
+
+
+.grp3 .getGrpImg :nth-child(3){
+   font-size: 14px;
+    letter-spacing: 0.01em;
+
+color: #D5D5D5;
+}
+
+.grp4{
+    grid-area: createGrp4;
+   
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    display: flex;
+   flex-direction: column;
+}
+
+.grp4 textarea{
+    height: 90%;
+    border: 0.5px solid #C4C4C4;
+    padding: 10px;
+}
+.grp4 label{
+ font-weight: 600;
+}
+.avartarCircle{
+    width: 50px;
+ color: white;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    background: #C4C4C4;
+    margin-top: 22px;
+}
+
+.grp2 span:nth-child(1){
+    color: #334D6E;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 35px;
+}
+
+.createGrpinput {
+    width: 300px;
+    height: 200px;
+}
+.createGrpinput{
+    position: relative;
+}
+.createGrpinput input{
+    /* opacity: 0;
+    width: 100%;
+    height: 100%; */
+    /* position: relative; */
+    z-index: 10;
+    /* opacity: 0; */
+    position: relative;
+    width: 150px;
+    height: 70px;
+    margin-left: 10px;
+ opacity: 0;
+ position: absolute;
+ cursor: pointer;
+}
+
+
+
+.createGrpinput button{
+    /* opacity: 1;
+    width: 100%;
+    height: 100%; */
+    /* position: relative; */
+    z-index: 12;
+}
+
+.chsFilebtn{
+    position: relative;
+}
+
+.chsFilebtn button{
+    position: absolute;
+    right: 150px;
+    white-space: nowrap;
+    width:120px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px double  #FDAD00;
+    color: #FDAD00;
+    height: 50px;
+
+}
+
+
+.createGRpBTN {
+    display: flex;
+    margin-top: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    grid-area: button;
+    margin: 0;
+    width: 312px;
+}
+
+.createGRpBTN button{
+    background: #FDAD00;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 0;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+
+.grpInfo1{
+    display: grid;
+    grid-template-areas: 
+    'gridHeader1 gridHeader2 gridHeader3  gridHeader4'
+    'griddata1 griddata2 griddata3 griddata4'
+    ;
+}
+
+.grpInfo1 ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.grpInfo1 ul li{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    /* or 179% */
+    
+    
+    color: #002333;
+}
+
+
+.grpInfoChildHeader1{
+    grid-area: gridHeader1;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #334D6E;
+    font-size: 18px;
+}
+
+.grpInfoChildHeader2{
+    grid-area: gridHeader2;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #334D6E;
+    font-size: 18px;
+}
+
+.grpInfoChildHeader3{
+    grid-area: gridHeader3;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #334D6E;
+    font-size: 18px;
+}
+
+.grpInfoChildHeader4{
+    grid-area: gridHeader4;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #334D6E;
+    font-size: 18px;
+}
+
+
+
+.grpInfoChild1{
+    grid-area: griddata1;
+}
+
+.grpInfoChild2{
+    grid-area: griddata2;
+}
+
+.grpInfoChild3{
+    grid-area: griddata3;
+}
+
+.grpInfoChild4{
+    grid-area: griddata4;
+}
+
+
+.grpInfoChild4 ul li:last-child a{
+    color: #FDAD00;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.allGrpsWrapper{
+    padding: 20px;
+    padding-top: 40px;
+    background-color: white;
+    width: 70vw;
+    margin-bottom: 50px;
+}
+
+.createGrpbtn8{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 80vw;
+}
+
+.createGrpbtn8 button{
+    border: none;
+    font-weight: 500;
+    color: white;
+    background: #FDAD00;
+    width: 150px;
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 5px;
+    filter: drop-shadow(1px 2px 1px rgba(255, 255, 255, 0.253));
+}
+
+.createGrpbtn8 button a{
+    color: white;
+    
+}
