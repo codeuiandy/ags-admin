@@ -44,11 +44,20 @@ body {
 	width: 100%;
 	margin-left: 10px;
 }
-
+.navRoutes span {
+	text-decoration: none;
+	color: #334D6E;
+	font-weight: 600;
+	font-size: 16px;
+	text-decoration: none;
+}
 .navRoutes span, a {
 	text-decoration: none;
 	color: #334D6E;
 	font-weight: 600;
+	font-size: 16px;
+	text-decoration: none !important;
+	font-weight: 400;
 }
 
 .linkNav {
