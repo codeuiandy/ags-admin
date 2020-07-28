@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import './modals.css'
 export default class planModal extends Component {
     render() {
         return (
@@ -8,7 +8,7 @@ export default class planModal extends Component {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5  class="centerModal-title" >Create Plan</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -16,22 +16,51 @@ export default class planModal extends Component {
       <div class="modal-body">
       <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
      placeholder="Enter plan"/>
    
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+    <label for="aboutPlan">Description</label>
+    <textarea  class="form-control" id="aboutPlan"/>
   </div>
  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="form-group">
+    <label for="interval">Interval</label>
+    <select class="form-control" id="interval">
+      <option>Select Interval</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input type="text" class="form-control" id="amount" 
+     placeholder="e.g 400,000"/>
+   
+  </div>
+
+  <div class="form-group">
+    <label for="PlanType">Plan Type</label>
+    <select class="form-control" id="PlanType">
+      <option>Select Plan</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
 </form>
       </div>
-      <div class="modal-footer">
+      <div class="centerModal-btn">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Create</button>
       </div>
     </div>
   </div>

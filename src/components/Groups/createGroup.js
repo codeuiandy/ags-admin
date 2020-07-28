@@ -4,7 +4,7 @@ import Grpicon from './Group.png'
 export default class createGroup extends Component {
     render() {
         return (
-            <Layout>
+            <Layout page="create-group">
                 <div className="create-grp">
                     <div className="grp1">
                      <label>Group Name</label>

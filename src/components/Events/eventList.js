@@ -6,7 +6,7 @@ export default class eventList extends Component {
     render() {
         return (
             <div>
-                <Layout>
+                <Layout page="event-list">
                 <div id="event-list-wraper">
                 <EventTable/>
               

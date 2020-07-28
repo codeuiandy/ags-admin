@@ -26,8 +26,8 @@ if (paid === "free") {
       console.log(this.state.startDate)
         return (
             <div>
-                <Layout>
-<div id="event-wraper">
+                <Layout page="create-event">
+<div style={{borderRadius:"10px"}} id="event-wraper">
     <div className="center-event-form ">
     <h1>Create Event</h1>
     <form >

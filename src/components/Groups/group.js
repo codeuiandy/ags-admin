@@ -6,7 +6,7 @@ import GrpUpdates from './GrpUpdates'
 export default class group extends Component {
     render() {
         return (
-            <Layout>
+            <Layout samePage="keepOpen" page="groups-overview" >
               <div className="createGrpbtn8">
                   <button> <Link to="/create_group">Create Group</Link></button>
               </div>

@@ -1,0 +1,30 @@
+.centerModal-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.centerModal-btn button:first-child{
+    margin-right: 30px;
+    color: grey !important;
+    background-color: transparent !important;
+    width: 130px;
+}
+
+.centerModal-btn button:last-child{
+    margin-right: 30px;
+    color: white !important;
+    background-color:  #FDAD00 !important;
+    width: 130px;
+    border: none;
+}
+
+.centerModal-title{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+   margin: auto;
+margin-left: 33%;
+}

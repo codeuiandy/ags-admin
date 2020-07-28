@@ -45,7 +45,7 @@ body {
 	margin-left: 10px;
 }
 
-.navRoutes span {
+.navRoutes span, a {
 	text-decoration: none;
 	color: #334D6E;
 	font-weight: 600;
