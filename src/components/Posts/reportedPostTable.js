@@ -1,0 +1,20 @@
+import React, { Component } from 'react'
+import Layout from '../Layout/index'
+import ReportedTable from '../Tables/reportedPosts'
+import UserRoute from '../UserRoute/Route'
+
+export default class reportedPostTable extends Component {
+    render() {
+        return (
+            <Layout activepage="keepOpenPosts" page="reported_posts_table">
+                 <UserRoute Route="Reported" destination="Posts" />
+                 <br/>
+                <div className="reportePostTable">
+                     <ReportedTable />
+                </div>
+
+               
+            </Layout>
+        )
+    }
+}

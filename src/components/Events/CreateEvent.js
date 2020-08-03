@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../Layout/index'
 import './index.css'
 import DatePicker from "react-datepicker";
- 
+import UserRoute from '../UserRoute/Route'
 import "react-datepicker/dist/react-datepicker.css";
 export default class CreateEvent extends Component {
     constructor(props){
@@ -26,7 +26,9 @@ if (paid === "free") {
       console.log(this.state.startDate)
         return (
             <div>
-                <Layout page="create-event">
+                <Layout  page="create-event" activepage="keepOpenEvents">
+                <UserRoute Route="Create" destination="Event" />
+                <br/>
 <div style={{borderRadius:"10px"}} id="event-wraper">
     <div className="center-event-form ">
     <h1>Create Event</h1>

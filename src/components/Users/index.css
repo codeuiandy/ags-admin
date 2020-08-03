@@ -1,0 +1,24 @@
+.fewUserWrap{
+    margin-top: 20px;
+    width: 80vw;
+    height: fit-content;
+    background-color: white;
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.listOfusers{
+    margin-top: 40px;
+}
+
+.listOfusers:nth-child(1){
+    color: #151522;
+}
+
+.seeAllGrps{
+    
+color: #109CF1;
+font-weight: 600;
+margin-left: 6px;
+}

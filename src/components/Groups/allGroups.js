@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import Layout from '../Layout/index'
 import AllGroupsTable from '../Tables/groupTable'
+import UserRoute from '../UserRoute/Route'
 export default class allGroups extends Component {
     render() {
         return (
-            <Layout page="all_groups" samePaged="keepOpen">
+            <Layout page="all_groups" activepage="keepOpenGroup">
+                   <UserRoute Route="All" destination="Groups" />
+                   <br/>
                 <div className="allGrpsWrapper">
                 <AllGroupsTable/>    
                 </div>

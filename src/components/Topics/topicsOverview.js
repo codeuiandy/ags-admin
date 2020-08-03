@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import Layout from '../Layout/index'
-import './index.css'
+import '../Groups/index.css'
 import {Link} from 'react-router-dom'
-import GrpUpdates from './GrpUpdates'
+import TopicUpdates from './topicUpdates'
 import UserRoute from '../UserRoute/Route'
-export default class group extends Component {
+export default class topicsOverview extends Component {
     render() {
         return (
-            <Layout activepage="keepOpenGroup" page="groups-overview" >
-                 <UserRoute Route="Group" destination="Overview" />
-             
+            <Layout activepage="keepOpenTopics" page="groups-overview" >
+                <UserRoute Route="Topics" destination="Overview" />
+           
               <div className="createGrpbtn8">
-                  <button> <Link to="/create_group">Create Group</Link></button>
+                  <button> <Link to="/create_topic">Create Topic</Link></button>
               </div>
                 <div className="grp-overview">
     <div className="grp-overview1">
@@ -22,7 +22,7 @@ export default class group extends Component {
     <div className="grp-overview1">
     <h1> <i class="fa fa-users" aria-hidden="true"></i> 
 
- Total Groups</h1>
+ Total Topics</h1>
    
 <p>12</p>
 
@@ -31,7 +31,7 @@ export default class group extends Component {
 
         <div className="grp-overview1">
        
-        <h1> <i class="fa fa-users" aria-hidden="true"></i> Active Groups</h1>
+        <h1> <i class="fa fa-users" aria-hidden="true"></i> Active Topics</h1>
 <p>12</p>
         </div>
 
@@ -39,20 +39,20 @@ export default class group extends Component {
         <div className="grp-overview1">
        
 
-        <h1>  <i class="fa fa-flag" aria-hidden="true"></i> Flagged Posts</h1>
+        <h1>  <i class="fa fa-flag" aria-hidden="true"></i> Flagged Topics</h1>
 <p>12</p>
         </div>
 
         <div className="grp-overview1">
        
 
-       <h1>  <i class="fa fa-flag" aria-hidden="true"></i> Flagged Feeds</h1>
+       <h1>  <i class="fa fa-flag" aria-hidden="true"></i> Flagged Topics</h1>
 <p>12</p>
        </div>
 </div>
                
 <div className="grp-overview-table">
-<GrpUpdates/>
+<TopicUpdates/>
 </div>
             </Layout>
         )

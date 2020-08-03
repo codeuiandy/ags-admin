@@ -5,7 +5,7 @@ import EventImage from './eventImage.png'
 export default class viewEvent extends Component {
     render() {
         return (
-            <Layout>
+            <Layout activepage="keepOpenEvents">
                 <div style={{borderRadius:"5px",paddingTop:"30px",marginBottom:"40px"}} id="event-list-wraper">
                     <div className="view-event">
                         <h1>Ted Talk @ MUSON</h1>

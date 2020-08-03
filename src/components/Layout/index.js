@@ -34,7 +34,7 @@ export default class index extends Component {
 			<div>
 				<div>
 					<Navbar handleSideBar={this.toggleSideBar} />
-					<Sidebar page={this.props.page} sidebarShow={sidebarShow} SidebarDefault={SidebarDefault} />
+					<Sidebar activepage={this.props.activepage} page={this.props.page} sidebarShow={sidebarShow} SidebarDefault={SidebarDefault} />
 					<div className="centra-margin">{this.props.children}</div>
 				</div>
 			</div>

@@ -12,6 +12,14 @@ import AllGroup from './components/Groups/allGroups'
 import './App.css'
 import Plans from './components/Plan/overview'
 import CreateGRP from './components/Groups/createGroup'
+import PostsOverview from './components/Posts/overview'
+import CreatePosts from './components/Posts/indexPost'
+import ReportedPostsTable from './components/Posts/reportedPostTable'
+import TopicsOverview from './components/Topics/topicsOverview'
+import CreateTopic from './components/Topics/create-topics'
+import AllTopics from './components/Topics/allTopics'
+import UsersOverView from './components/Users/userOver'
+import Allusers from './components/Users/allUsers'
 function App() {
 	return (
 		<div className="App">
@@ -28,6 +36,15 @@ function App() {
 						<Route exact path="/create_group" component={CreateGRP} />
 						<Route exact path="/all_groups" component={AllGroup} />
 						<Route exact path="/plans" component={Plans} />
+						<Route exact path="/posts-overview" component={PostsOverview} />
+						<Route exact path="/create_posts" component={CreatePosts} />
+						<Route exact path="/reported_posts_table" component={ReportedPostsTable} />
+						<Route exact path="/topic_overview" component={TopicsOverview} />
+						<Route exact path="/create_topic" component={CreateTopic} />
+						<Route exact path="/all_topics" component={AllTopics} />
+						<Route exact path="/user-overview" component={UsersOverView} />
+						<Route exact path="/all_users" component={Allusers} />
+						
 				</Switch>
 			</Router>
 		</div>

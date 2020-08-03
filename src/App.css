@@ -1,3 +1,16 @@
 /* .controlRow__root .input-group-append button{
 display: none !important;
 } */
+
+table tbody td{
+    color: #707683;
+    font-size: 15px;
+}
+
+table thead tr td{
+    color: #707683;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+}

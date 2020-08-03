@@ -5,16 +5,17 @@ import StaticticsOVERVIEW from "./staticticsOverview";
 import Statictics from "./statictics";
 import Recents from "./recents";
 import Layout from '../Layout/index'
+import UserRoute from '../UserRoute/Route'
 export default class index extends Component {
 	render() {
 		return (
 			<React.Fragment>
 				<Layout page="dashboard">
-				<div className="headerDashBoard">
-					<h1>
-						User <span>Overview</span>
-					</h1>
-				</div>
+					<div style={{marginLeft:"10px"}}>
+	<UserRoute  Route="User" destination="Overview" />
+					</div>
+				
+				
 
 				<div id="app">
 					<OVERVIEW />

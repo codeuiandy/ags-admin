@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import Layout from '../Layout/index'
 import Grpicon from './Group.png'
+import UserRoute from '../UserRoute/Route'
 export default class createGroup extends Component {
     render() {
         return (
-            <Layout page="create-group">
+            <Layout page="create-group" activepage="keepOpenGroup">
+                <UserRoute Route="Create" destination="Group" />
+                <br/>
                 <div className="create-grp">
                     <div className="grp1">
                      <label>Group Name</label>

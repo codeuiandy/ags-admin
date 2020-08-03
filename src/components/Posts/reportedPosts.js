@@ -152,31 +152,14 @@ function chartData() {
 		labels: ["January", "February", "March", "April", "May", "June", "July"],
 		datasets: [
 			{
-				label: "New Users",
+				label: "No. of reported post",
 
-				data: [65, 59, 80, 81, 56, 80, 90, 100],
+				data: [65, 59, 10, 81, 56, 80, 20, 40],
 				fill: false,
-				backgroundColor: "#1E9682",
-				borderColor: "#FDAD00",
+				backgroundColor: " #EA4335",
+				borderColor: " #EA4335",
 				pointStyle: "rectRounded",
-			},
-			{
-				label: "Reported Users",
-
-				fill: false,
-				color: ["#1E9682"],
-				borderColor: "#D93025",
-				data: [8, 28, 40, 19, 6, 27, 40],
-			},
-
-			{
-				label: " Affiliate Members ",
-
-				fill: false,
-				color: ["#1E9682"],
-				borderColor: "#4267B2",
-				data: [30, 46, 40, 15, 60, 67, 70],
-			},
+			}
 		],
 	};
 }
@@ -185,7 +168,7 @@ const options = {
 	responsive: true,
 };
 
-class Statictics extends React.Component {
+class reportedPosts extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -195,7 +178,7 @@ class Statictics extends React.Component {
 
 	render() {
 		return (
-			<div className="">
+			<div className="responsiveChart">
 				{" "}
 				<LineChart data={this.state.data} />
 			</div>
@@ -203,4 +186,4 @@ class Statictics extends React.Component {
 	}
 }
 
-export default Statictics;
+export default reportedPosts;

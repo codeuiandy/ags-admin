@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import "./layout.css";
 import {Link } from 'react-router-dom'
+import { Scrollbars } from 'react-custom-scrollbars';
 export default class Sidebar extends Component {
 	constructor(props){
 		super(props)
 		this.state={
 			dropDownEvent:false,
-			dropDownGroup:false
+			dropDownGroup:false,
+			dropDownPosts:false,
+			dropDownTopics:false,
 		}
 		console.log(this.props)
+		
+		
 	}
 	dropDown=(events)=>{
 		let dropDownEvent = this.state.dropDownEvent
@@ -16,7 +21,9 @@ export default class Sidebar extends Component {
 if (events==="events") {
 	this.setState({
 		dropDownEvent:!dropDownEvent,
-		dropDownGroup:false
+		dropDownGroup:false,
+		dropDownPosts:false,
+		dropDownTopics:false,
 	})	
 }
 
@@ -24,28 +31,76 @@ if (events==="groups") {
 	this.setState({
 		dropDownGroup:!dropDownGroup,
 		dropDownEvent:false,
+		dropDownPosts:false,
+		dropDownTopics:false,
+		
+	})
+}
+
+if (events==="posts") {
+	this.setState({
+		dropDownPosts:!this.state.dropDownPosts,
+		dropDownEvent:false,
+		dropDownGroup:false,
+		dropDownTopics:false,
+		
+	})	
+}
+
+if (events==="topics") {
+	this.setState({
+		dropDownTopics:!this.state.dropDownTopics,
+		dropDownEvent:false,
+		dropDownGroup:false,
+	
 		
 	})	
 }
 
 
 	}
+
+	
 	componentDidMount(){
-		if (this.props.samePaged === "keepOpen") {
+		
+		if (this.props.activepage === "keepOpenEvents") {
 			this.setState({
-				dropDownGroup:true
+dropDownEvent:true,
 			})
-			console.log(this.props)
+			
+		}
+
+		if (this.props.activepage === "keepOpenGroup") {
+			this.setState({
+				dropDownGroup:true,
+				
+			})
+			
+		}
+
+		if (this.props.activepage === "keepOpenPosts") {
+			this.setState({
+			
+				dropDownPosts:true,
+			
+			})
+			
+		}
+
+		if (this.props.activepage === "keepOpenTopics") {
+			this.setState({
+			
+			
+				dropDownTopics:true,
+			})
+			
 		}
 		
-		if (this.props.samePage === "keepOpen") {
-			this.setState({
-				dropDownGroup:true
-			})
-			console.log(this.props)
-		}
+	
 	}
 	render() {
+		
+		
 		return (
 			<div>
 				<div
@@ -56,6 +111,11 @@ if (events==="groups") {
 					} ${this.props.SidebarDefault}`}
 				>
 					<div className={`sidebar`}>
+					<Scrollbars style={{ width: 224, height: "100vh "}}
+					autoHide
+					autoHideTimeout={1000}
+					autoHideDuration={200}
+					>
 						<ul className="sidebarList">
 						
 							<li className={`${this.props.page==="dashboard"?"activeClass":""}`}><i class="fas fa-align-justify">
@@ -81,20 +141,56 @@ if (events==="groups") {
 								
 								<li className={`${this.props.page==="create-event"?"activeClass":""}`}>
 								<Link className={`${this.props.page==="groups-overview"?"activeClass":""}`} to="/groups">
-									Group OverView</Link></li>
+									Group Overview</Link></li>
 								<li className={`${this.props.page==="event-list"?"activeClass":""}`}> <Link 
 								className={`${this.props.page==="all_groups"?"activeClass":""}`} to="/all_groups">
 									Groups</Link></li>
 							</ul>
 							:""}
-<li className={`${this.props.page === "planss" ? "activeClass"  : ""}`}> <i class="fas fa-mail-bulk"></i> <Link className={`${this.props.page === "planss" ? "activeClass"  : ""}`} to="plans">Plans</Link></li>
+<li onClick={(e)=>this.dropDown('posts')}><i class="far fa-calendar-alt"></i> Posts</li>
+							{this.state.dropDownPosts===true?
 							
-							<li className={`${this.props.page==="posts"?"activeClass":""}`}> <i class="fas fa-mail-bulk"></i> Posts</li>
+							<ul className="dropdownlist">
+								
+								<li className={`${this.props.page==="postOverview"?"activeClass":""}`}>
+								<Link className={`${this.props.page==="postOverview"?"activeClass":""}`} to="/posts-overview">
+									Overview</Link></li>
+								<li className={`${this.props.page==="create_posts"?"activeClass":""}`}> <Link 
+								className={`${this.props.page==="create_posts"?"activeClass":""}`} to="/create_posts">
+									Create Post</Link></li>
+									<li className={`${this.props.page==="reported_posts_table"?"activeClass":""}`}> <Link 
+								className={`${this.props.page==="reported_posts_table"?"activeClass":""}`} to="/reported_posts_table">
+									Reported Post</Link></li>
+									
+							</ul>
+							:""}			
+
+														
+<li onClick={(e)=>this.dropDown('topics')}><i class="far fa-calendar-alt"></i>Topics</li>
+							{this.state.dropDownTopics === true?
+							
+							<ul className="dropdownlist">
+								
+								<li className={`${this.props.page==="create-event"?"activeClass":""}`}>
+								<Link className={`${this.props.page==="groups-overview"?"activeClass":""}`} to="/topic_overview">
+									Overview</Link></li>
+								<li className={`${this.props.page==="create_topic"?"activeClass":""}`}> <Link 
+								className={`${this.props.page==="create_topic"?"activeClass":""}`} to="/create_topic">
+									Create Topic</Link></li>
+									<li className={`${this.props.page==="all_topics"?"activeClass":""}`}> <Link 
+								className={`${this.props.page==="all_topics"?"activeClass":""}`} to="/all_topics">
+									Topics</Link></li>
+									
+							</ul>
+							:""}		
+
+
 							<li className={`${this.props.page==="users"?"activeClass":""}`}><i class="fas fa-users"></i> Users</li>
 							<li className={`${this.props.page==="chats"?"activeClass":""}`}><i class="far fa-comments"></i>Chats</li>
 							<li className={`${this.props.page==="email"?"activeClass":""}`}> <i class="fas fa-envelope-open-text"></i>Email</li>
 							<li className={`${this.props.page==="settings"?"activeClass":""}`}><i class="fas fa-cogs"></i> Settings</li>
 						</ul>
+						</Scrollbars>
 					</div>
 				</div>
 			</div>
