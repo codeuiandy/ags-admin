@@ -1,95 +1,41 @@
 import React, { Component } from "react";
-
+import ReactTooltip from "react-tooltip";
 import Table from "./customTable";
 import { Link } from "react-router-dom";
+import _ from 'lodash';
 
-export default class eventListTable extends Component {
+export default class fewUsersers extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
 	}
 
 	bodyRow = () => {
-		const datas = [
-			{
-				name: "John David",
-				email: "codeuiandy@gmail.com",
-				joned: "Paid",
-				registrationDate:"21/02/2020",
-                recentActivity:"21/02/2020"
-			},
-			{
-				name: "Anita Joe",
-				email: "codeuiandy@gmail.com",
-				joned: "Paid",
-				registrationDate:"21/02/2020",
-                recentActivity:"21/02/2020"
-			},
-			{
-				name: "Binta ligas",
-				email: "codeuiandy@gmail.com",
-				joned: "Paid",
-				registrationDate:"21/02/2020",
-                recentActivity:"21/02/2020"
-			},
-			{
-				name: "Adedayo Manfo",
-				email: "codeuiandy@gmail.com",
-				joned: "Paid",
-				registrationDate:"21/02/2020",
-                recentActivity:"21/02/2020"
-			},
-			{
-				name: "Binta ligas",
-				email: "codeuiandy@gmail.com",
-				joned: "Paid",
-                registrationDate:"21/02/2020",
-                recentActivity:"21/02/2020"
-			},
-		];
-		const body = datas.map((data, index) => ({
-			name: data.name,
-			email: data.email,
+		const body = this.props.fewUsers.map((data, index) => ({
+			name: _.startCase(_.lowerCase(data.name)),
+			email:  _.startCase(_.lowerCase(`${data.email}`)),
 
-			joned: data.joned,
-			
-			registrationDate: data.registrationDate,
-            recentActivity:data.recentActivity,
-			action: (
-				<a>
-					<Link to="/view_event">
-						{" "}
-						<span
-							className="edit"
-							style={{ color: " #0D0D0D", fontSize: "14px" }}
-							// onClick={() => this.props.handleEdit(data.id)}
-							// data-backdrop="static"
-							className="fa fa-eye mr-4 add-cursor"
-						></span>
-					</Link>
+			joined: _.startCase(_.lowerCase(`${data.joined}`)),
+			registrationDate: _.startCase(_.lowerCase(`${data.registrationDate}`)),
+			recentActivity:  _.startCase(_.lowerCase(`${data.recentActivity}`)),
 
-					<Link to="">
-						{" "}
-						<span
-							className="edit"
-							style={{ color: " #0D0D0D", fontSize: "14px" }}
-							// onClick={() => this.props.handleEdit(data.id)}
-							// data-backdrop="static"
-							className="fa fa-eraser mr-4 add-cursor"
-						></span>
-					</Link>
-				
+			// action: (
+			// 	<a>
+			// 		<Link to={`edit-payroll/${data.id}`}>
+			// 			{" "}
+			// 			<span
+			// 				className="edit"
+			// 				className="fa fa-pencil-square-o mr-4 add-cursor"
+			// 			></span>
+			// 		</Link>
 
-
-					<span
-						style={{ color: " #F00A0A", fontSize: "14px",cursor:"pointer" }}
-					
-						// onClick={() => this.props.handleDelete(data.id)}
-						className="fa fa-trash mr-4 add-cursor"
-						data-toggle="modal" data-target="#ComfirmModal"
-					></span>
-				</a>
-			),
+			// 		<span
+			// 			className="del"
+			// 			onClick={() => this.props.deletePayroll(data.id)}
+			// 			className="fa fa-trash mr-4 add-cursor"
+			// 		></span>
+			// 	</a>
+			// ),
 		}));
 		return body;
 	};
@@ -97,33 +43,31 @@ export default class eventListTable extends Component {
 	header = () => {
 		const header = [
 			{
-				title: "Name (filterable)",
+				title: "Item Name (filterable)",
 				prop: "name",
 				sortable: true,
 				filterable: true,
 			},
-			
+			{ title: "Email", prop: "email", sortable: true },
 
-			{ title: "Email", prop: "email" },
+			{ title: "Joined/Gifted", prop: "joined", sortable: true },
 
-			{ title: "joned", prop: "joned" },
+			{ title: "Registration Date", prop: "registrationDate", sortable: true },
 
-            { title: "Locaton", prop: "registrationDate" },
-            	{ title: "Recent Activity", prop: "recentActivity" },
-
-			{ title: "Actions", prop: "action" },
+			{ title: "Recent Activity", prop: "recentActivity", sortable: true },
+			// { title: "Actions", prop: "action" },
 		];
 		return header;
 	};
 
 	render() {
 		return (
-			<div className="table-responsivee">
+			<div className="table-responsive" style={{ overflow: "hidden" }}>
 				<Table
 					body={this.bodyRow}
 					head={this.header}
-					rowsPerPage={3}
-					rowsPerPageOption={[10, 15,  25]}
+					rowsPerPage={10}
+					rowsPerPageOption={[10, 15, 20, 25]}
 				/>
 			</div>
 		);

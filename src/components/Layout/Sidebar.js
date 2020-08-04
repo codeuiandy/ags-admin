@@ -10,6 +10,7 @@ export default class Sidebar extends Component {
 			dropDownGroup:false,
 			dropDownPosts:false,
 			dropDownTopics:false,
+			dropDownUsers:false
 		}
 		console.log(this.props)
 		
@@ -24,6 +25,7 @@ if (events==="events") {
 		dropDownGroup:false,
 		dropDownPosts:false,
 		dropDownTopics:false,
+			dropDownUsers:false
 	})	
 }
 
@@ -33,6 +35,7 @@ if (events==="groups") {
 		dropDownEvent:false,
 		dropDownPosts:false,
 		dropDownTopics:false,
+		dropDownUsers:false
 		
 	})
 }
@@ -43,6 +46,7 @@ if (events==="posts") {
 		dropDownEvent:false,
 		dropDownGroup:false,
 		dropDownTopics:false,
+		dropDownUsers:false
 		
 	})	
 }
@@ -52,7 +56,17 @@ if (events==="topics") {
 		dropDownTopics:!this.state.dropDownTopics,
 		dropDownEvent:false,
 		dropDownGroup:false,
-	
+		dropDownUsers:false
+		
+	})	
+}
+
+
+if (events==="users") {
+	this.setState({
+		dropDownEvent:false,
+		dropDownGroup:false,
+		dropDownUsers:!this.state.dropDownUsers
 		
 	})	
 }
@@ -95,8 +109,36 @@ dropDownEvent:true,
 			})
 			
 		}
+
+
+		if (this.props.activepage === "keepOpenUsers") {
+			this.setState({
+			
+			
+				dropDownUsers:true,
+			})
+			
+		}
+
+		if (this.props.activepage === "allUsers") {
+			this.setState({
+			
+			
+				dropDownUsers:true,
+			})
+			
+		}
 		
-	
+		
+		if (this.props.activepage === "reportedUsers") {
+			this.setState({
+			
+			
+				dropDownUsers:true,
+			})
+			
+		}
+		
 	}
 	render() {
 		
@@ -182,11 +224,31 @@ dropDownEvent:true,
 									Topics</Link></li>
 									
 							</ul>
+							:""}	
+
+
+
+							<li onClick={(e)=>this.dropDown('users')}><i class="fas fa-users"></i>Users</li>
+							{this.state.dropDownUsers === true?
+							
+							<ul className="dropdownlist">
+								
+								<li className={`${this.props.page==="usersOverview" ? "activeClass":""}`}>
+								<Link className={`${this.props.page==="usersOverview"?"activeClass":""}`} to="/user-overview">
+									Users Overview</Link></li>
+
+								<li className={`${this.props.page==="allUsers" ? "activeClass":""}`}>
+								<Link className={`${this.props.page==="allUsers"?"activeClass":""}`} to="/all_users">
+									All Users</Link></li>
+								<li className={`${this.props.page==="reportedUsers"?"activeClass":""}`}> <Link 
+								className={`${this.props.page==="reportedUsers"?"activeClass":""}`} to="/all_reported_users">
+									Reported Users</Link></li>
+									
+									
+							</ul>
 							:""}		
 
-
-							<li className={`${this.props.page==="users"?"activeClass":""}`}><i class="fas fa-users"></i> Users</li>
-							<li className={`${this.props.page==="chats"?"activeClass":""}`}><i class="far fa-comments"></i>Chats</li>
+              	<li className={`${this.props.page==="chats"?"activeClass":""}`}><i class="far fa-comments"></i>Chats</li>
 							<li className={`${this.props.page==="email"?"activeClass":""}`}> <i class="fas fa-envelope-open-text"></i>Email</li>
 							<li className={`${this.props.page==="settings"?"activeClass":""}`}><i class="fas fa-cogs"></i> Settings</li>
 						</ul>

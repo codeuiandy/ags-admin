@@ -20,6 +20,8 @@ import CreateTopic from './components/Topics/create-topics'
 import AllTopics from './components/Topics/allTopics'
 import UsersOverView from './components/Users/userOver'
 import Allusers from './components/Users/allUsers'
+import AllReportedUsers from './components/Users/allReportedUsers'
+
 function App() {
 	return (
 		<div className="App">
@@ -44,6 +46,7 @@ function App() {
 						<Route exact path="/all_topics" component={AllTopics} />
 						<Route exact path="/user-overview" component={UsersOverView} />
 						<Route exact path="/all_users" component={Allusers} />
+						<Route exact path="/all_reported_users" component={AllReportedUsers} />
 						
 				</Switch>
 			</Router>

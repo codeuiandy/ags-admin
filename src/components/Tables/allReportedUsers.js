@@ -4,20 +4,20 @@ import Table from "./customTable";
 import { Link } from "react-router-dom";
 import _ from 'lodash';
 
-export default class allUsers extends Component {
+export default class allReportedUsers extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
 	}
 
 	bodyRow = () => {
-		const body = this.props.allUsers.map((data, index) => ({
+		const body = this.props.allReportedUser.map((data, index) => ({
 			name: _.startCase(_.lowerCase(data.name)),
 			email:  _.startCase(_.lowerCase(`${data.email}`)),
 
-			joined: _.startCase(_.lowerCase(`${data.joined}`)),
-			registrationDate: _.startCase(_.lowerCase(`${data.registrationDate}`)),
-			recentActivity:  _.startCase(_.lowerCase(`${data.recentActivity}`)),
+			Reportedon: _.startCase(_.lowerCase(`${data.Reportedon}`)),
+			reportedFor: _.startCase(_.lowerCase(`${data.reportedFor}`)),
+			reportedBy:  _.startCase(_.lowerCase(`${data.reportedBy}`)),
 
 			action: (
 				<a>
@@ -31,14 +31,7 @@ export default class allUsers extends Component {
 						></span>
 					</Link>
 
-					<Link to={`edit-payroll/${data.id}`}>
-						{" "}
-						<span
-						style={{fontSize:"14px"}}
-							className="edit"
-							className="far fa-edit mr-4 add-cursor"
-						></span>
-					</Link>
+				
                           
 					<span
 					style={{fontSize:"14px"}}
@@ -53,12 +46,7 @@ export default class allUsers extends Component {
 						onClick={() => this.props.deletePayroll(data.id)}
 						className="fa fa-trash mr-4 add-cursor"
 					></span>
-	<span
-	style={{fontSize:"14px"}}
-						className="del"
-						onClick={() => this.props.deletePayroll(data.id)}
-						className="fas fa-envelope-square mr-4 add-cursor"
-					></span>
+
 
 
 				</a>
@@ -70,18 +58,18 @@ export default class allUsers extends Component {
 	header = () => {
 		const header = [
 			{
-				title: "Item Name (filterable)",
+				title: "Name (filterable)",
 				prop: "name",
 				sortable: true,
 				filterable: true,
 			},
 			{ title: "Email", prop: "email", sortable: true },
 
-			{ title: "Joined/Gifted", prop: "joined", sortable: true },
+			{ title: "Reported on", prop: "Reportedon", sortable: true },
 
-			{ title: "Registration Date", prop: "registrationDate", sortable: true },
+			{ title: "Reported for", prop: "reportedFor", sortable: true },
 
-			{ title: "Recent Activity", prop: "recentActivity", sortable: true },
+			{ title: "Reported by", prop: "reportedBy", sortable: true },
 			{ title: "Actions", prop: "action" },
 		];
 		return header;
