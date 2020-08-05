@@ -7,10 +7,18 @@ import Recents from "./recents";
 import Layout from '../Layout/index'
 import UserRoute from '../UserRoute/Route'
 export default class index extends Component {
+	constructor(props){
+		super(props)
+		this.state={
+		isVisible :true
+		}
+	}
 	render() {
+
 		return (
 			<React.Fragment>
 				<Layout page="dashboard">
+			
 					<div style={{marginLeft:"10px"}}>
 	<UserRoute  Route="User" destination="Overview" />
 					</div>
@@ -18,11 +26,12 @@ export default class index extends Component {
 				
 
 				<div id="app">
-					<OVERVIEW />
+						<OVERVIEW />
 					<StaticticsOVERVIEW />
 					<Statictics />
 				</div>
 				<Recents />
+			
 				</Layout>
 			</React.Fragment>
 		);

@@ -160,7 +160,7 @@ dropDownEvent:true,
 					>
 						<ul className="sidebarList">
 						
-							<li className={`${this.props.page==="dashboard"?"activeClass":""}`}><i class="fas fa-align-justify">
+							<li className={`${this.props.page==="dashboard"?"activeClass":""}`}><i class="fas fa-th">
 								</i><Link className={`${this.props.page==="dashboard"?"activeClass":""}`} to="/dashboard">Dashboard</Link> </li>
 							<li onClick={(e)=>this.dropDown('events')}><i class="far fa-calendar-alt"></i> Events</li>
 							{this.state.dropDownEvent===true?
@@ -176,7 +176,7 @@ dropDownEvent:true,
 							</ul>
 							:""}
 
-<li onClick={(e)=>this.dropDown('groups')}><i class="far fa-calendar-alt"></i> Groups</li>
+<li onClick={(e)=>this.dropDown('groups')}><i class="fas fa-users"></i> Groups</li>
 							{this.state.dropDownGroup===true?
 							
 							<ul className="dropdownlist">
@@ -189,7 +189,7 @@ dropDownEvent:true,
 									Groups</Link></li>
 							</ul>
 							:""}
-<li onClick={(e)=>this.dropDown('posts')}><i class="far fa-calendar-alt"></i> Posts</li>
+<li onClick={(e)=>this.dropDown('posts')}><i class="fas fa-vote-yea"></i> Posts</li>
 							{this.state.dropDownPosts===true?
 							
 							<ul className="dropdownlist">
@@ -208,7 +208,7 @@ dropDownEvent:true,
 							:""}			
 
 														
-<li onClick={(e)=>this.dropDown('topics')}><i class="far fa-calendar-alt"></i>Topics</li>
+<li onClick={(e)=>this.dropDown('topics')}><i class="fas fa-calendar-week"></i>Topics</li>
 							{this.state.dropDownTopics === true?
 							
 							<ul className="dropdownlist">
