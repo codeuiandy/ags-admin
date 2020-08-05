@@ -9,15 +9,15 @@ export default class userInfo extends Component {
     constructor(props){
         super(props)
         this.state={
-            postController:"poll",
+            postController:"profile",
             startDate:new Date(),
         }
     }
 
     SwitchPostType=(postType)=>{
-     if (postType === "post") {
+     if (postType === "profile") {
          this.setState({
-             postController:"post"
+             postController:"profile"
          })
      }
 
@@ -46,12 +46,14 @@ export default class userInfo extends Component {
         let Switch = this.state.postController
         return (
            
-            <Layout activepage="keepOpenPosts" page="create_posts">
-                <UserRoute Route="Create" destination="Posts" />
-                <div className="postsRoutes">
-                    <div onClick={(e)=>{this.SwitchPostType("post")}} className={`postTypes1 
-                    ${Switch === "post" ? "activePost" : ""}`} >
-                        Post
+            <Layout activepage="keepOpenUsers" page="usersOverview">
+                <UserRoute Route="User" destination="Profile" />
+              
+
+                <div className="postsRoutes userProfileRoute">
+                    <div onClick={(e)=>{this.SwitchPostType("profile")}} className={`postTypes1 
+                    ${Switch === "profile" ? "activePost" : ""}`} >
+                        Profile
                     </div>
 
                   
@@ -64,45 +66,192 @@ export default class userInfo extends Component {
 
                     <div onClick={(e)=>{this.SwitchPostType("Advert")}}  className={`postTypes2
                     ${Switch === "Advert" ? "activePost" : ""}`}>
-                        Advert
+                        Posts
                     </div>
 
-                    <div onClick={(e)=>{this.SwitchPostType("Icebreaker")}}  className={`postTypes1 
-                    ${Switch === "Icebreaker" ? "activePost" : ""}`}>
-                        Icebreaker
+                    <div onClick={(e)=>{this.SwitchPostType("Coomments")}}  className={`postTypes1 
+                    ${Switch === "Coomments" ? "activePost" : ""}`}>
+                      Comments
                     </div>
-                    <div onClick={(e)=>{this.SwitchPostType("poll")}}  className={`postTypes1 
-                    ${Switch === "poll" ? "activePost" : ""}`}>
-                        Poll
+                    <div onClick={(e)=>{this.SwitchPostType("Applications")}}  className={`postTypes1 
+                    ${Switch === "Applications" ? "activePost" : ""}`}>
+                        Applications
+                    </div>
+
+                     <div onClick={(e)=>{this.SwitchPostType("Opportunities")}}  className={`postTypes1 
+                    ${Switch === "Opportunities" ? "activePost" : ""}`}>
+                        Opportunities
                     </div>
                     
                 </div>
 
                 {
-                Switch === "post" ? (
+                Switch === "profile" ? (
                     <div>
-                     <div className="createPosts">
-                           <div className="createPostInner">
-                           <form>
-  <div class="form-group postForm">
-  
-    <textarea placeholder="Type in your post" class="form-control" id="aboutPlan"/>
-  </div>
-  </form>
+                     <div className="userProfile">
+                     <div className="userinfoName">
+                <div className="main-username347">
+                    <h1>
+                        Andrew Okeke
+                    </h1>
 
-  <div className="postActions">
-      <div className="postAction">
-          <input type="file"/>
-<span>
-    {/* <img src={ImageIcon} alt=""/> */}
-</span>
-      </div>
+                    <h2>
+                        Va Canada
+                    </h2>
+                </div>
 
-      <div className="postButton">
-<button> Create</button>
-      </div>
-  </div>
-                           </div>
+                <div className="userQuickactions">
+                <i class="far fa-envelope usernetwork"></i>
+                <i class="fa fa-flag" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+
+                </div>
+                </div>
+
+                
+                           <div className="aboutUser">
+                     
+                   <div className="aboutUserFlex">
+                       <div className="data1">
+                           <span>Date of Birth:</span>
+                           <span className="userIn">12 March 1991</span>
+                       </div>
+                       <div className="data1">
+                           <span>Nationality:</span>
+                           <span>Nigeria</span>
+                       </div>
+                   </div>
+
+
+                   <div className="aboutUserFlex">
+                       <div className="data1">
+                           <span>Bio:</span>
+                           <span  className="userIn">Lead Product Design for Apple. I’m from Dublin
+                           . I practice for 4 years</span>
+                       </div>
+                       <div className="data1">
+                           <span>Email:</span>
+                           <span>lindsey.stroud@gmail.com</span>
+                       </div>
+                   </div>
+
+
+                   <div className="aboutUserFlex">
+                       <div className="data1">
+                           <span>Job Title:</span>
+                           <span className="userIn">Lead Product Design</span>
+                       </div>
+                       <div className="data1">
+                           <span>Profession:</span>
+                           <span>Desingner</span>
+                       </div>
+                   </div>
+
+
+
+                   <div className="aboutUserFlex">
+                       <div className="data1">
+                           <span>Industry:</span>
+                           <span className="userIn">Technology</span>
+                       </div>
+                       <div className="data1">
+                           <span>Location:</span>
+                           <span>Va canada</span>
+                       </div>
+                   </div>
+
+
+
+                   <div className="aboutUserFlex">
+                       <div className="data1">
+                           <span>Most recent certification:</span>
+                           <span className="userIn">Bsc</span>
+                       </div>
+                       <div className="data1">
+                           <span>Date of Graduation:</span>
+                           <span>21/1/1</span>
+                       </div>
+                   </div>
+
+
+
+                   <div className="aboutUserFlex">
+                       <div className="data1">
+                           <span>Institution:</span>
+                           <span className="userIn">New York State University</span>
+                       </div>
+                       <div style={{marginLeft:"auto"}} className="data1">
+                           <span>Location:</span>
+                           <span>New York, USA</span>
+                       </div>
+                   </div>
+<br/>
+
+                   <div className="aboutUserFlex">
+                       <div className="data1 dataButtons">
+                           <span>Interest</span>
+                           <span className="userIn">
+                               <button>Reading</button>
+                               <button>Finance</button>
+                               <button>Programming</button>
+                           </span>
+                       </div>
+                       <div style={{marginLeft:"auto"}} className="">
+                           <p style={{display:"flex"}}>
+                               <p className="circleUserNetwork1">
+                               <i class="fab fa-facebook-f usernetwork"></i>
+                               </p>
+
+                               <p className="circleUserNetwork2">
+                               <i class="fab fa-linkedin-in usernetwork"></i>
+                               </p>
+
+                               <p className="circleUserNetwork4">
+                               <i class="far fa-envelope usernetwork"></i>
+                               </p>
+
+                               <p className="circleUserNetwork3">
+                               <i class="fab fa-twitter usernetwork"></i>
+                               </p>
+
+                              
+                           </p >
+                           
+                       </div>
+                   </div>
+
+
+                   <div className="aboutUserFlex">
+                       <div className="data1 dataButtons">
+                           <span>Groups</span>
+                           <span className="userIn">
+                               <button>Reading</button>
+                               <button>Finance</button>
+                               <button>Programming</button>
+                           </span>
+                       </div>
+                      
+                   </div>
+<br/>
+
+                   <div className="aboutUserFlex">
+                       <div className="data1 dataButtons">
+                           <span>Topics</span>
+                           <span className="userIn">
+                               <button>Reading</button>
+                               <button>Finance</button>
+                               <button>Programming</button>
+                           </span>
+                       </div>
+                       
+                   </div>
+
+
+
+                   
+
+
+                 </div>
                         </div>
                     </div>
                 ) : ""

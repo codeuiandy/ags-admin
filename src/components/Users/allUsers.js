@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Alluser from '../Tables/allUsers'
 import Layout from '../Layout/index'
 import PageRouteInfo from '../UserRoute/Route'
+
 export default class allUsers extends Component {
     constructor(props){
         super(props)

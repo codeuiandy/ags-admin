@@ -24,21 +24,24 @@ export default class allUsers extends Component {
 
 <Link to={`edit-payroll/${data.id}`}>
 						{" "}
+						<Link to='user_info'>
 						<span
 						style={{fontSize:"14px"}}
 							className="edit"
 							className="fas fa-eye mr-4 add-cursor"
 						></span>
+						</Link>
+						
 					</Link>
 
-					<Link to={`edit-payroll/${data.id}`}>
+				
 						{" "}
 						<span
 						style={{fontSize:"14px"}}
 							className="edit"
 							className="far fa-edit mr-4 add-cursor"
 						></span>
-					</Link>
+					
                           
 					<span
 					style={{fontSize:"14px"}}
