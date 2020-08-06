@@ -150,5 +150,32 @@ font-size: 15px;
     }
 
     .userProfileRoute{
-        width: 40vw;
+        width: fit-content;
+       height: 35px;
+       padding-bottom: -2px;
+    }
+
+    .userinfoName{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+
+    .main-username347 h1:first-child{
+        font-size: 18px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .main-username347 h2:last-child{
+        font-size: 13px;
+        color: #334D6E;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .userQuickactions i{
+        color: #334D6E;
+        margin: 10px;
+        cursor: pointer;
     }

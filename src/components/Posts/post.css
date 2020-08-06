@@ -11,14 +11,16 @@
    margin-right: 20px;
    padding-top: 20px;
    border-radius: 5px;
+   height: 350px;
+   margin-bottom: 130px;
 }
 
 .postChart2{
     border-radius: 5px;
     background-color: white;
     padding-top: 20px;
-    /* padding-left: 10px;
-    padding-right: 10px; */
+    height: fit-content;
+    height: 350px;
 }
 
 .postsRoutes{
@@ -31,6 +33,7 @@
     align-items: flex-end;
     border-bottom: 2px solid  #90A0B7;
 margin-top: 20px;
+padding-left: 30px;
 }
 /* .postsRoutes div:nth-child(1)
 {
@@ -56,7 +59,7 @@ margin-top: 20px;
     display: block;
     content: "";
     background-color: #2EA2F8;
-    width: 70px;
+    width: 103px;
     height: 3px;
     position: relative;
     top: 2px;
@@ -216,3 +219,84 @@ border-radius: 5px;
     margin-bottom: 30px;
     border-radius: 5px;
 }
+
+.allPostsOverview{
+    background-color: white;
+    margin-top: 73px;
+    width: 80vw;
+    margin-bottom: 20px;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.switchChart{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 20px 0 20px;
+}
+
+.switchCharcts span{
+    color: red;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.switchCharcts .activeChart:after{
+    text-align: center;
+    content: "";
+    background: red;
+    display: block;
+    height: 5px;
+    width: 110px;
+    border-radius: 5px;
+}
+
+.switchCharcts .reportedCharts:after{
+    text-align: center;
+    content: "";
+    background: red;
+    display: block;
+    height: 5px;
+    width: 110px;
+    border-radius: 5px;
+}
+
+.switchCharcts {
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 20px 0 20px;
+}
+
+
+
+.switchChart span{
+    color: orange;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.switchChart .activeChart:after{
+    text-align: center;
+    content: "";
+    background: orange;
+    display: block;
+    height: 5px;
+    width: 110px;
+    border-radius: 5px;
+}
+
+.switchChart .reportedCharts:after{
+    text-align: center;
+    content: "";
+    background: red;
+    display: block;
+    height: 5px;
+    width: 110px;
+    border-radius: 5px;
+}
+

@@ -46,7 +46,9 @@ export default class indexPost extends Component {
         let Switch = this.state.postController
         return (
            
-            <Layout activepage="keepOpenPosts" page="create_posts">
+            <Layout RouteUserLayout={
+                this.props.history
+            } activepage="keepOpenPosts" page="create_posts">
                 <UserRoute Route="Create" destination="Posts" />
                 <div className="postsRoutes">
                     <div onClick={(e)=>{this.SwitchPostType("post")}} className={`postTypes1 

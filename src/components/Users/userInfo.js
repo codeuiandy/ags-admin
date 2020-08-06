@@ -4,11 +4,55 @@ import Layout from "../Layout/index"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import UserRoute from '../UserRoute/Route'
+import UserPosts from '../Tables/userPosts'
 
 export default class userInfo extends Component {
     constructor(props){
         super(props)
         this.state={
+            userPosts:[{
+                name:"Get rich and die rich",
+                email:"lorem is fg aishu iysxyus  joe dem",
+                joined:"12/10/2020",
+                registrationDate:"12/12/2020",
+                recentActivity:"12/2/2020"
+            },
+            {
+                name:"Get rich and die rich",
+                email:"lorem is fg aishu iysxyus  joe dem",
+                joined:"12/10/2020",
+                registrationDate:"12/12/2020",
+                recentActivity:"12/2/2020"
+            },
+
+            {
+                name:"Man daev joekendo",
+                email:"lorem is fg aishu iysxyus  joe dem",
+                joined:"12/10/2020",
+                registrationDate:"12/12/2020",
+                recentActivity:"12/2/2020"
+            }
+
+            ,{
+                name:"kohn Get rich and die rich",
+                email:"lorem is fg aishu iysxyus  joe dem",
+                joined:"12/10/2020",
+                registrationDate:"12/12/2020",
+                recentActivity:"12/2/2020"
+            },{
+                name:"Get rich and die rich",
+                email:"lorem is fg aishu iysxyus  joe dem",
+                joined:"12/10/2020",
+                registrationDate:"12/12/2020",
+                recentActivity:"12/2/2020"
+            },{
+                name:"Get rich and die rich",
+                email:"lorem is fg aishu iysxyus  joe dem",
+                joined:"12/10/2020",
+                registrationDate:"12/12/2020",
+                recentActivity:"12/2/2020"
+            }
+        ],
             postController:"profile",
             startDate:new Date(),
         }
@@ -21,16 +65,16 @@ export default class userInfo extends Component {
          })
      }
 
-     if (postType === "Advert") {
+     if (postType === "posts") {
         this.setState({
-            postController:"Advert"
+            postController:"posts"
         })
     }
 
 
-    if (postType === "Icebreaker") {
+    if (postType === "comments") {
         this.setState({
-            postController:"Icebreaker"
+            postController:"comments"
         })
     }
 
@@ -46,7 +90,9 @@ export default class userInfo extends Component {
         let Switch = this.state.postController
         return (
            
-            <Layout activepage="keepOpenUsers" page="usersOverview">
+            <Layout RouteUserLayout={
+                this.props.history
+            } activepage="keepOpenUsers" page="usersOverview">
                 <UserRoute Route="User" destination="Profile" />
               
 
@@ -64,13 +110,13 @@ export default class userInfo extends Component {
 
 
 
-                    <div onClick={(e)=>{this.SwitchPostType("Advert")}}  className={`postTypes2
-                    ${Switch === "Advert" ? "activePost" : ""}`}>
+                    <div onClick={(e)=>{this.SwitchPostType("posts")}}  className={`postTypes2
+                    ${Switch === "posts" ? "activePost" : ""}`}>
                         Posts
                     </div>
 
-                    <div onClick={(e)=>{this.SwitchPostType("Coomments")}}  className={`postTypes1 
-                    ${Switch === "Coomments" ? "activePost" : ""}`}>
+                    <div onClick={(e)=>{this.SwitchPostType("comments")}}  className={`postTypes1 
+                    ${Switch === "comments" ? "activePost" : ""}`}>
                       Comments
                     </div>
                     <div onClick={(e)=>{this.SwitchPostType("Applications")}}  className={`postTypes1 
@@ -259,44 +305,78 @@ export default class userInfo extends Component {
 
                   
 {
-                Switch === "Advert" ? (
-                    <div>
-                        Advert
+               Switch === "posts" ? (
+                <div>
+                 <div className="userProfile">
+                 <div className="userinfoName">
+            <div className="main-username347">
+                <h1>
+                    Andrew Okeke
+                </h1>
+
+                <h2>
+                    Va Canada
+                </h2>
+            </div>
+
+            <div className="userQuickactions">
+            <i class="far fa-envelope usernetwork"></i>
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+
+            </div>
+            </div>
+ <br/>
+ <UserPosts userPosts={this.state.userPosts}/>
+            
+                       
+
+               
+
+
+           
                     </div>
-                ) : ""
+                </div>
+            ) : ""
                 }
 
 
 
                             
 {
-                Switch === "Icebreaker" ? (
+                Switch === "comments" ? (
                     <div>
-                       <div className="createPosts">
-                           <div className="createPostInner">
-                           <form>
-  <div class="form-group postForm">
-  
-    <textarea placeholder="What do you want to ask?" class="form-control" id="aboutPlan"/>
-  </div>
-  </form>
-
-  <div className="postActions">
-      <div className="postAction">
-          <input type="file"/>
-<span>
-    {/* <img src={ImageIcon} alt=""/> */}
-</span>
-      </div>
-
-      <div className="postButton">
-<button> Create</button>
-      </div>
-  </div>
-                           </div>
-                        </div>
-                    </div>
-                ) : ""
+                    <div className="userProfile">
+                    <div className="userinfoName">
+               <div className="main-username347">
+                   <h1>
+                       Andrew Okeke
+                   </h1>
+   
+                   <h2>
+                       Va Canada
+                   </h2>
+               </div>
+   
+               <div className="userQuickactions">
+               <i class="far fa-envelope usernetwork"></i>
+               <i class="fa fa-flag" aria-hidden="true"></i>
+               <i class="fa fa-trash" aria-hidden="true"></i>
+   
+               </div>
+               </div>
+    <br/>
+    <UserPosts userPosts={this.state.userPosts}/>
+               
+                          
+   
+                  
+   
+   
+              
+                       </div>
+                   </div>
+               ) : ""
                 }
 
 

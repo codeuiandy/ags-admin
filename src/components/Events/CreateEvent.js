@@ -26,7 +26,9 @@ if (paid === "free") {
       console.log(this.state.startDate)
         return (
             <div>
-                <Layout  page="create-event" activepage="keepOpenEvents">
+                <Layout RouteUserLayout={
+					this.props.history
+				}  page="create-event" activepage="keepOpenEvents">
                 <UserRoute Route="Create" destination="Event" />
                 <br/>
 <div style={{borderRadius:"10px"}} id="event-wraper">

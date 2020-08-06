@@ -5,7 +5,9 @@ import UserRoute from '../UserRoute/Route'
 export default class allTopics extends Component {
     render() {
         return (
-            <Layout activepage="keepOpenTopics" page="all_topics">
+            <Layout RouteUserLayout={
+                this.props.history
+            } activepage="keepOpenTopics" page="all_topics">
                  <UserRoute Route="All" destination="Topics" />
                 <br/>
                 <div className="allTopics">

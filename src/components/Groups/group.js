@@ -7,7 +7,9 @@ import UserRoute from '../UserRoute/Route'
 export default class group extends Component {
     render() {
         return (
-            <Layout activepage="keepOpenGroup" page="groups-overview" >
+            <Layout RouteUserLayout={
+                this.props.history
+            } activepage="keepOpenGroup" page="groups-overview" >
                  <UserRoute Route="Group" destination="Overview" />
              
               <div className="createGrpbtn8">

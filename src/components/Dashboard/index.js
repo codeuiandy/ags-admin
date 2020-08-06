@@ -12,20 +12,24 @@ export default class index extends Component {
 		this.state={
 		isVisible :true
 		}
+		// console.log(">>>>>", this.props.history.push("g"))
 	}
 	render() {
 
 		return (
 			<React.Fragment>
-				<Layout page="dashboard">
+				<Layout RouteUserLayout={
+					this.props.history
+				}  page="dashboard">
 			
 					<div style={{marginLeft:"10px"}}>
-	<UserRoute  Route="User" destination="Overview" />
+	<UserRoute  Route="User" destination="Overview" / >
 					</div>
 				
 				
 
 				<div id="app">
+
 						<OVERVIEW />
 					<StaticticsOVERVIEW />
 					<Statictics />

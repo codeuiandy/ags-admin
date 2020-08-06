@@ -8,7 +8,9 @@ export default class eventList extends Component {
     render() {
         return (
             <div>
-                <Layout page="event-list" activepage="keepOpenEvents">
+                <Layout RouteUserLayout={
+					this.props.history
+				} page="event-list" activepage="keepOpenEvents">
                 <UserRoute Route="All" destination="Events" />
                 <br/>
                 <div id="event-list-wraper">

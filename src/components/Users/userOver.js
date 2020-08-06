@@ -57,7 +57,9 @@ class userOver extends Component {
     }
     render() {
         return (
-            <Layout activepage="keepOpenUsers" page="usersOverview">
+            <Layout RouteUserLayout={
+                this.props.history
+            } activepage="keepOpenUsers" page="usersOverview">
                  <UserRoute Route="Post" destination="Overview" />
                  <br/>
                 <div className="postsOverview">

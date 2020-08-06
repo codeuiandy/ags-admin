@@ -65,7 +65,7 @@ body {
 }
 
 .togMenu {
-	color: #052555;
+	color: #052555 !important;
 	margin-left: 10px;
 }
 
@@ -97,7 +97,7 @@ body {
 	overflow-y: scroll;
 	padding-bottom: 20px;
 	overflow: hidden;
-	
+
 }
 /* .sidebar::-webkit-scrollbar{
 	width: 10px;
@@ -111,8 +111,9 @@ body {
 .sidebarList {
 	margin-top: 35px;
 	list-style-type: none;
-	margin-left: 20px;
+	margin-left: 40px;
 	margin-bottom: 120px;
+
 }
 
 .sidebarList li {
@@ -121,6 +122,11 @@ body {
 	color: #334D6E;
 	font-size: 16px;
 	margin-left: -35px !important;
+	list-style-type: none;
+	padding: 0;
+	
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 
@@ -139,7 +145,9 @@ body {
 } */
 
 /* RESPONSIVENESS */
-
+.dropdownlist{
+	margin-left: -30px;
+}
 @media (min-width: 1025px) {
 	.togMenu {
 		display: none;
@@ -184,6 +192,7 @@ body {
 		margin: 0;
 		color: white;
 		font-size: 27px;
+		margin-left: 80px;
 	}
 	@keyframes hideBar {
 		0% {
@@ -216,4 +225,47 @@ body {
 
 .activeClass{
 	color: orange !important;
+}
+
+.hoverActiveRoute{
+	width: 170px;
+	height: 25px;
+	background-color: transparent;
+	position: absolute;
+	left: 0;
+	display: block;
+	z-index: 12;
+cursor: pointer;
+}
+
+
+.hoverActiveRoute:hover::after{
+	content: "";
+	/* width: 30px;
+	height: 20px;
+	background-color: red;
+	position: absolute;
+	left: 0; */
+	border-radius: 0 15px 15px 0;
+	display: block;z-index: 10;
+	animation:showActiveRouteAnimation 200ms ease-in forwards ;
+	cursor: pointer;
+}
+
+@keyframes showActiveRouteAnimation{
+0%{
+	width: 30px;
+	height: 10px;
+	background-color: #FDAD00;
+	position: absolute;
+	left: -20px;
+}
+
+100%{
+	width: 30px;
+	height: 20px;
+	background-color: #FDAD00;
+	position: absolute;
+	left: 0;
+}
 }

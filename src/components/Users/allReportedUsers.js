@@ -53,7 +53,9 @@ export default class allReportedUsers extends Component {
     }
     render() {
         return (
-            <Layout activepage="reportedUsers" page="reportedUsers">
+            <Layout RouteUserLayout={
+                this.props.history
+            } activepage="reportedUsers" page="reportedUsers">
                 <PageRouteInfo Route="Reported" destination="Users"/>
                 <br/>
                 <div className="allusersWrap">

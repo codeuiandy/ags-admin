@@ -8,7 +8,9 @@ export default class overview extends Component {
     render() {
         return (
             <div>
-            <Layout page="planss">
+            <Layout RouteUserLayout={
+					this.props.history
+				} page="planss">
                     <div className="createPlan">
                         <button   data-toggle="modal"
                          data-target="#PlanModals">Create New Plan</button>

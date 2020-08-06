@@ -54,7 +54,9 @@ export default class allUsers extends Component {
     }
     render() {
         return (
-            <Layout activepage="allUsers" page="allUsers">
+            <Layout RouteUserLayout={
+                this.props.history
+            } activepage="allUsers" page="allUsers">
                    <PageRouteInfo Route="All" destination="Users"/>
                    <br/>
                 <div className="allusersWrap">

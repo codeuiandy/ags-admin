@@ -5,7 +5,9 @@ import UserRoute from '../UserRoute/Route'
 export default class allGroups extends Component {
     render() {
         return (
-            <Layout page="all_groups" activepage="keepOpenGroup">
+            <Layout RouteUserLayout={
+                this.props.history
+            } page="all_groups" activepage="keepOpenGroup">
                    <UserRoute Route="All" destination="Groups" />
                    <br/>
                 <div className="allGrpsWrapper">

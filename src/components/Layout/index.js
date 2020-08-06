@@ -45,7 +45,7 @@ export default class index extends Component {
 			<div>
 				<div>
 					<Navbar handleSideBar={this.toggleSideBar} />
-					<Sidebar activepage={this.props.activepage} page={this.props.page} sidebarShow={sidebarShow} SidebarDefault={SidebarDefault} />
+					<Sidebar RouteUserLayout={this.props.RouteUserLayout} activepage={this.props.activepage} page={this.props.page} sidebarShow={sidebarShow} SidebarDefault={SidebarDefault} />
 					<div className="centra-margin">
 					<motion.div    initial="hidden"
     animate="visible"

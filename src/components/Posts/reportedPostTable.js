@@ -6,7 +6,9 @@ import UserRoute from '../UserRoute/Route'
 export default class reportedPostTable extends Component {
     render() {
         return (
-            <Layout activepage="keepOpenPosts" page="reported_posts_table">
+            <Layout RouteUserLayout={
+                this.props.history
+            } activepage="keepOpenPosts" page="reported_posts_table">
                  <UserRoute Route="Reported" destination="Posts" />
                  <br/>
                 <div className="reportePostTable">

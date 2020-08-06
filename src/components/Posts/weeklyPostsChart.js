@@ -1,16 +1,15 @@
 
-
 import React from "react";
 import { Line as LineChart } from "react-chartjs-2";
 
 function chartData() {
 	return {
-		labels: ["January", "February", "March", "April", "May", "June", "July"],
+		labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
 		datasets: [
 			{
-				label: " No. of new users ",
+				label: " No. of weekly new posts",
 
-				data: [65, 59, 60, 81, 56, 40, 90, 100],
+				data: [50, 10, 30, 40, 5, 90 ,100 ],
 				fill: false,
 				backgroundColor: "#FDAD00",
 				borderColor: "#FDAD00",
@@ -24,7 +23,7 @@ const options = {
 	responsive: true,
 };
 
-class newUsers extends React.Component {
+class weeklyPostsChart extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -42,4 +41,4 @@ class newUsers extends React.Component {
 	}
 }
 
-export default newUsers;
+export default weeklyPostsChart;
