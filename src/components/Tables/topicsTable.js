@@ -13,77 +13,77 @@ export default class topicsTable extends Component {
 		const datas = [
 
 			{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},
 
 			{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},
 
 			{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: "Close",
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},	{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: "Close",
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},	{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},	{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: "Close",
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},
 			{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},
 			{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},
 			{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},
 			{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe:<a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			
 			},
 			{
-				topicName: "Adedayo Manfo",
-				Createdby: "New York Cockroaches",
+				topicName: "Ladies Talk",
+				Createdby: "Ade John",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "http://example.com/?bells=baseball&agreement=bird",
 			

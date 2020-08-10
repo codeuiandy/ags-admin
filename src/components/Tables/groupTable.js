@@ -13,7 +13,7 @@ export default class GroupTable extends Component {
 		const datas = [
 
 			{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "Cornwall Hippos",
@@ -21,7 +21,7 @@ export default class GroupTable extends Component {
 			},
 
 			{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "Cornwall Hippos",
@@ -29,60 +29,60 @@ export default class GroupTable extends Component {
 			},
 
 			{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: "Close",
 				posts: "Cornwall Hippos",
 			
 			},	{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: "Close",
 				posts: "Cornwall Hippos",
 			
 			},	{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "Cornwall Hippos",
 			
 			},	{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: "Close",
 				posts: "Cornwall Hippos",
 			
 			},
 			{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "Cornwall Hippos",
 			
 			},
 			{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "Cornwall Hippos",
 			
 			},
 			{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "Cornwall Hippos",
 			
 			},
 			{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe:<a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "Cornwall Hippos",
 			
 			},
 			{
-				groupname: "Adedayo Manfo",
+				groupname: "Book club",
 				Createdby: "New York Cockroaches",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
 				posts: "Cornwall Hippos",

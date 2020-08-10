@@ -219,7 +219,7 @@ dropDownEvent:true,
 							:""}
 
 <div onClick={(e)=>this.dropDown('posts')} className="hoverActiveRoute"></div>
-<li ><i class="fas fa-vote-yea"></i> Posts</li>
+<li ><i class="fas fa-vote-yea"></i>Feed</li>
 							{this.state.dropDownPosts===true?
 							
 							<ul className="dropdownlist">
@@ -317,6 +317,15 @@ dropDownEvent:true,
 							:""}		
 <div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
               	<li ><i class="far fa-comments"></i>Chats</li>
+
+				  <div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
+              	<li ><i class="far fa-comments"></i>Referral</li>
+
+				  <div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
+              	<li ><i class="far fa-comments"></i>Membership Gifting</li>
+
+				  <div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
+              	<li ><i class="far fa-comments"></i>Resources</li>
 
 				  <div className="hoverActiveRoute"></div>
 							<li className={`${this.props.page==="email"?"activeClass":""}`}> <i class="fas fa-envelope-open-text"></i>Email</li>

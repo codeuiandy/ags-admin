@@ -9,7 +9,7 @@ export default class indexPost extends Component {
     constructor(props){
         super(props)
         this.state={
-            postController:"poll",
+            postController:"Advert",
             startDate:new Date(),
         }
     }
@@ -53,7 +53,7 @@ export default class indexPost extends Component {
                 <div className="postsRoutes">
                     <div onClick={(e)=>{this.SwitchPostType("post")}} className={`postTypes1 
                     ${Switch === "post" ? "activePost" : ""}`} >
-                        Post
+                        Post To Feed
                     </div>
 
                   
@@ -75,7 +75,7 @@ export default class indexPost extends Component {
                     </div>
                     <div onClick={(e)=>{this.SwitchPostType("poll")}}  className={`postTypes1 
                     ${Switch === "poll" ? "activePost" : ""}`}>
-                        Poll
+                       Ask A Question
                     </div>
                     
                 </div>
@@ -114,8 +114,39 @@ export default class indexPost extends Component {
 {
                 Switch === "Advert" ? (
                     <div>
-                        Advert
-                    </div>
+
+                    <div className="createPosts">
+                          <div className="createPostInner adverPostInner">
+                          <form>
+
+                          <div class="form-group postForm postFormAdvert">
+ 
+ <input placeholder="Advert name" class="form-control" type="text"/>
+</div>
+
+ <div class="form-group postForm postFormAdvert">
+ 
+   <input placeholder="Insert Advert barnner" class="form-control" type="file"/>
+ </div>
+
+
+ <div class="form-group postForm postFormAdvert">
+ 
+ <input placeholder="Insert Link" class="form-control" type="text"/>
+</div>
+
+ </form>
+
+ <div className="postActions">
+
+
+     <div className="postButton postAdvert">
+<button> Create</button>
+     </div>
+ </div>
+                          </div>
+                       </div>
+                   </div>
                 ) : ""
                 }
 
@@ -130,16 +161,14 @@ export default class indexPost extends Component {
                            <form>
   <div class="form-group postForm">
   
-    <textarea placeholder="What do you want to ask?" class="form-control" id="aboutPlan"/>
+    <textarea placeholder="Type your icebreaker question here" class="form-control" id="aboutPlan"/>
   </div>
   </form>
 
   <div className="postActions">
       <div className="postAction">
           <input type="file"/>
-<span>
-    <img src={ImageIcon} alt=""/>
-</span>
+
       </div>
 
       <div className="postButton">
@@ -157,59 +186,30 @@ export default class indexPost extends Component {
 {
                 Switch === "poll" ? (
                     <div>
-<div className="createPosts">
-                           <div className="createPostInner">
-                           <form>
-  <div class="form-group postForm">
-  
-    <input placeholder="Ask a question" class="form-control" id="aboutPlan"/>
-  </div>
+                    <div className="createPosts">
+                        <div className="createPostInner">
+                        <form>
+<div class="form-group postForm">
 
- 
-  <div className="postUserSelection">
-  <label>
-      User's Selection
-  </label>
-      <input placeholder="Choice one" type="text"/>
-      <input placeholder="Choice two" type="text"/>
-  </div>
+ <textarea placeholder="Type your question here" class="form-control" id="aboutPlan"/>
+</div>
+</form>
 
-  <div className="postPollDuration">
+<div className="postActions">
+   <div className="postAction">
+       <input type="file"/>
+{/* <span>
+ <img src={ImageIcon} alt=""/>
+</span> */}
+   </div>
 
-  <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
-    showTimeSelect
-      timeFormat="HH:mm"
-      timeIntervals={15}
-      timeCaption="time"
-      dateFormat="MMMM d, yyyy h:mm aa"/>
-
-<DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
-    showTimeSelect
-      timeFormat="HH:mm"
-      timeIntervals={15}
-      timeCaption="time"
-      dateFormat="MMMM d, yyyy h:mm aa"/>
-
-
-<DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
-    showTimeSelect
-      timeFormat="HH:mm"
-      timeIntervals={15}
-      timeCaption="time"
-      dateFormat="MMMM d, yyyy h:mm aa"/>
-  </div>
-  </form>
-
-  <div className="postActions">
-    
-
-      <div className="postButton pollbyn">
+   <div className="postButton">
 <button> Create</button>
-      </div>
-  </div>
-                           </div>
+   </div>
+</div>
                         </div>
-                    </div>
+                     </div>
+                 </div>
                 ) : ""
                 }
 

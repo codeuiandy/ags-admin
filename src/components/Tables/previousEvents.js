@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Table from "./customTable";
 import { Link } from "react-router-dom";
 
-export default class eventListTable extends Component {
+export default class previousEvents extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -12,48 +12,37 @@ export default class eventListTable extends Component {
 	bodyRow = () => {
 		const datas = [
 			{
-				name: "John David",
-				Organizers: "20",
-				eventType: "20%",
-				date: "20",
-				location:"Lagos-Nigeria"
+				name: "Ted Talk",
+				Date:"20/10/2020",
+				Location: "Lagos/Nigeria",
+				
 			},
 			{
-				name: "Anita Joe",
-				Organizers: "20",
-				eventType: "20%",
-				date: "20",
-				location:"Lagos-Nigeria"
+				name: "Ted Talk",
+				Date:"20/10/2020",
+				Location: "Lagos/Nigeria",
 			},
 			{
-				name: "Binta ligas",
-				Organizers: "20",
-				eventType: "20%",
-				date: "20",
-				location:"Lagos-Nigeria"
+				name: "Ted Talk",
+				Date:"20/10/2020",
+				Location: "Lagos/Nigeria",
 			},
 			{
-				name: "Adedayo Manfo",
-				Organizers: "20",
-				eventType: "20%",
-				date: "20",
-				location:"Lagos-Nigeria"
+				name: "Ted Talk",
+				Date:"20/10/2020",
+				Location: "Lagos/Nigeria",
 			},
 			{
-				name: "Binta ligas",
-				Organizers: "20",
-				eventType: "20%",
-				date: "20",
-				location:"Lagos-Nigeria"
+				name: "Ted Talk",
+				Date:"20/10/2020",
+				Location: "Lagos/Nigeria",
 			},
 		];
 		const body = datas.map((data, index) => ({
 			name: data.name,
-			Organizers: data.Organizers,
-
-			eventType: data.eventType,
-			date: data.date,
-			location: data.location,
+			Date: data.Date,
+			Location: data.Location,
+		
 
 			action: (
 				<a>
@@ -97,18 +86,14 @@ export default class eventListTable extends Component {
 	header = () => {
 		const header = [
 			{
-				title: "Name (filterable)",
+				title: "Event Name",
 				prop: "name",
 				sortable: true,
 				filterable: true,
 			},
-			{ title: "Organizers", prop: "Organizers" },
+			{ title: "Event Date", prop: "Date" },
 
-			{ title: "Paid/Free", prop: "eventType" },
-
-			{ title: "Date", prop: "date" },
-
-			{ title: "Locaton", prop: "location" },
+			{ title: "Locaton", prop: "Location" },
 
 			{ title: "Actions", prop: "action" },
 		];

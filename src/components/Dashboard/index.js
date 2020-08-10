@@ -27,15 +27,15 @@ export default class index extends Component {
 					</div>
 				
 				
-
+					<OVERVIEW />
 				<div id="app">
 
-						<OVERVIEW />
+						
 					<StaticticsOVERVIEW />
 					<Statictics />
 				</div>
-				<Recents />
-			
+				{/* <Recents /> */}
+			<br/>
 				</Layout>
 			</React.Fragment>
 		);
