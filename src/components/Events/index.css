@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     margin:auto;
-    width: 70%;
+    width: 80%;
     flex-direction: column;
 }
 
@@ -14,11 +14,8 @@
 .center-event-form h1{
     font-style: normal;
 font-weight: bold;
-font-size: 29px;
-
-
-
-color: #151522;
+font-size: 25px;
+color: #495057c2;
 margin-top: 20px;
 margin-bottom: 15px;
     
@@ -81,7 +78,7 @@ margin-bottom: 15px;
     margin: auto;
     border: 1px dashed #ced4da;
 border-radius: 5px;
-margin-top: 20px;
+margin-top: 30px;
 position: relative;
 
 }
@@ -98,11 +95,12 @@ position: relative;
 .eventImageInfo{
    position: absolute;
    top: 35px;
-   left: 75px;
+   left: 50px;
    display: flex;
    justify-content: center;
    align-items: center;
    margin: auto;
+  
    flex-direction: column;
 }
 
@@ -136,7 +134,7 @@ margin: 0;
     align-items: center;
     margin: auto;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 60px;
     width: 40%;
 }
 
@@ -153,7 +151,7 @@ font-weight: 500;
 #event-wraper{
     padding-bottom: 0;
     background-color: white;
-    width: 70vw;
+    width: 50vw;
     height: fit-content;
     margin-bottom: 20px;
     padding-bottom: 50px;
@@ -168,7 +166,7 @@ font-weight: 500;
 
 
 #event-list-wraper{
-    width: fit-content;
+    width:70vw;
     height: fit-content;
     padding: 50px;
     background-color: white;
@@ -432,3 +430,31 @@ padding: 0px 20px 0px 20px;
     color: #6A707E;
 font-weight: 700;
 }
+
+.eventForm input::placeholder{
+font-size: 15px;
+color: rgba(128, 128, 128, 0.5);
+}
+
+.eventForm textarea::placeholder{
+    font-size: 15px;
+ color: rgba(128, 128, 128, 0.616);
+    }
+
+    
+.eventForm select{
+    font-size: 15px;
+ color: rgba(128, 128, 128, 0.616);
+    cursor: pointer;
+    }
+
+    .react-datepicker__input-container input{
+        font-size: 15px;
+    color: rgba(128, 128, 128, 0.616);
+    cursor: pointer;
+    }
+
+    .seletEventRecent{
+        width: 200px;
+        cursor: pointer;
+    }

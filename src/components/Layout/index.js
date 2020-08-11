@@ -31,15 +31,6 @@ export default class index extends Component {
 
 	
 	render() {
-		const variants = {
-			hidden: { opacity: 0.3,translateX:100 },
-			visible: { opacity: 1,translateX:0},
-		  }
-		  const spring = {
-			type: "spring",
-			stiffness: 80,
-			damping: 8
-		  };
 		let { SidebarDefault, sidebarShow } = this.state;
 		return (
 			<div>
@@ -47,12 +38,9 @@ export default class index extends Component {
 					<Navbar handleSideBar={this.toggleSideBar} />
 					<Sidebar RouteUserLayout={this.props.RouteUserLayout} activepage={this.props.activepage} page={this.props.page} sidebarShow={sidebarShow} SidebarDefault={SidebarDefault} />
 					<div className="centra-margin">
-					<motion.div    initial="hidden"
-    animate="visible"
-    variants={variants} transition={spring}>
-	{this.props.children}
-						</motion.div>
 						
+	{this.props.children}
+					
 					
 						</div>
 				</div>

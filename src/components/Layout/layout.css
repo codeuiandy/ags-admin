@@ -17,7 +17,10 @@ body {
 	padding-right: 0;
 	overflow: hidden;
 	position: absolute;
-	right: 20px;
+	right:20px;
+	/* display: flex;
+	align-items: center;
+	flex-direction: column; */
 }
 
 .App-header {

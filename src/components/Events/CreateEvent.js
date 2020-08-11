@@ -11,6 +11,7 @@ export default class CreateEvent extends Component {
             startDate:new Date(),
             eventType:"internal",
             eventMedium:"",
+            eventFee:"freeEvent",
             CTA:"Pay"
         }
     }
@@ -34,10 +35,10 @@ export default class CreateEvent extends Component {
 
       if(e.target.value === "external"){
         this.setState({
-          eventType:"internal"
+          eventType:"external"
         })
       }
-    
+    //for paid internal event it should generate a link for payment and A default CTA of Pay 
       }
 
 
@@ -53,7 +54,7 @@ export default class CreateEvent extends Component {
 <div style={{borderRadius:"10px"}} id="event-wraper">
     <div className="center-event-form ">
     <h1>Create Event</h1>
-    <form >
+    <form className="eventForm">
   <div class="form-group">
      
     <label for="title">Title</label>
@@ -91,15 +92,92 @@ export default class CreateEvent extends Component {
       <div class="form-group">
       <label for="exampleFormControlSelect1">Is it paid or free?</label>
       <select
-  
+  value={this.state.eventFee}
+  name="eventFee"
+ onChange={this.handleChange}
       class="form-control" id="exampleFormControlSelect1">
-          <option value="internal"></option>
-        <option value="external">Free event</option>
-         <option>Paid event</option>
+          <option value="freeEvent">Free event</option>
+         <option value="paidEvent">Paid event</option>
         
       </select>
     </div>
     ):""
+  }
+
+
+{
+    this.state.eventType === "internal" & this.state.eventFee === "freeEvent" ?(
+      <div>
+
+
+        <div class="form-group">
+    <label for="register">Registration Link</label>
+    <input type="text" class="form-control" id="register" placeholder="Event registration link"/>
+
+  </div>
+      </div>
+    ) : ""
+  }
+
+{
+    this.state.eventType === "internal" & this.state.eventFee === "paidEvent" ?(
+      <div>
+
+
+<div class="form-group">
+    <label for="register">Event Fee</label>
+    <input type="text" class="form-control" id="register" placeholder="$ 50,000"/>
+
+  </div>
+      </div>
+    ) : ""
+  }
+
+
+  {
+    this.state.eventType === "external" & this.state.eventFee === "freeEvent" ?(
+      <div>
+
+<div class="form-group">
+<label for="register">CTA Button</label>
+    <input type="text" class="form-control" id="register" placeholder="e.g Register, Attend"/>
+
+
+  </div>
+
+        <div class="form-group">
+    <label for="register">Registration Link</label>
+    <input type="text" class="form-control" id="register" placeholder="Event registration link"/>
+
+  </div>
+      </div>
+    ) : ""
+  }
+
+
+{
+    this.state.eventType === "external" & this.state.eventFee === "paidEvent" ?(
+      <div>
+
+<div class="form-group">
+    <label for="register">CTA Button</label>
+    <input type="text" class="form-control" id="register" placeholder="e.g Register, Attend"/>
+
+  </div>
+
+        <div class="form-group">
+    <label for="register">Registration Link</label>
+    <input type="text" class="form-control" id="register" placeholder="Event registration link"/>
+
+  </div>
+
+  <div class="form-group">
+    <label for="register">Event Fee</label>
+    <input type="text" class="form-control" id="register" placeholder="$ 50,000"/>
+
+  </div>
+      </div>
+    ) : ""
   }
   
   {/* {
@@ -176,7 +254,7 @@ export default class CreateEvent extends Component {
  
 <div className="datePickerEvent">
 <div class="form-group">
-    <label for="Presenter">Event Start</label>
+    <label for="Presenter">Event Start Date</label>
     <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
     showTimeSelect
       timeFormat="HH:mm"
@@ -187,7 +265,30 @@ export default class CreateEvent extends Component {
 
 
   <div class="form-group">
-    <label for="Presenter">Event End</label>
+    <label for="Presenter">Event End Date</label>
+    <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
+    showTimeSelect
+      timeFormat="HH:mm"
+      timeIntervals={15}
+      timeCaption="time"
+      dateFormat="MMMM d, yyyy h:mm aa"/>
+  </div>
+</div>
+
+<div className="datePickerEvent">
+<div class="form-group">
+    <label for="Presenter">Event Start Time</label>
+    <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
+    showTimeSelect
+      timeFormat="HH:mm"
+      timeIntervals={15}
+      timeCaption="time"
+      dateFormat="MMMM d, yyyy h:mm aa"/>
+  </div>
+
+
+  <div class="form-group">
+    <label for="Presenter">Event End Time</label>
     <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
     showTimeSelect
       timeFormat="HH:mm"

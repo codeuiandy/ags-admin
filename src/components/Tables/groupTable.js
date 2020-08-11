@@ -13,81 +13,106 @@ export default class GroupTable extends Component {
 		const datas = [
 
 			{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname: <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},
 
 			{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},
 
 			{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},	{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},	{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},	{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},
 			{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},
 			{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},
 			{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},
 			{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe:<a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},
 			{
-				groupname: "Book club",
-				Createdby: "New York Cockroaches",
+				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "Cornwall Hippos",
+				posts: "81",
 			
 			},
+
+		{	action: (
+				<a>
+
+<Link >
+						{" "}
+						<span
+						style={{fontSize:"14px"}}
+							className="edit"
+							className="fas fa-eye mr-4 add-cursor"
+						></span>
+					</Link>
+
+				
+                          
+					<span
+					style={{fontSize:"14px"}}
+						className="del"
+					
+						className="fa fa-trash mr-4 add-cursor"
+					></span>
+
+
+
+				</a>)}
 
 			
 		];
@@ -98,7 +123,30 @@ export default class GroupTable extends Component {
 			openORclsoe: data.openORclsoe,
 			posts: data.posts,
 			location: data.location,
+			action: (
+				<a>
 
+<Link to="/view_group" >
+						{" "}
+						<span
+						style={{fontSize:"14px"}}
+							className="edit"
+							className="fas fa-edit mr-4 add-cursor"
+						></span>
+					</Link>
+
+				
+                          
+					<span
+					style={{fontSize:"14px"}}
+						className="del"
+					
+						className="fa fa-trash mr-4 add-cursor"
+					></span>
+
+
+
+				</a>)
 		
 		}));
 		return body;
@@ -123,7 +171,8 @@ export default class GroupTable extends Component {
 			},
 
 			
-
+			{ title: "Action", prop: "action" ,
+		},
 		
 		];
 		return header;

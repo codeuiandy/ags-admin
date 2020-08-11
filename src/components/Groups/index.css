@@ -389,3 +389,92 @@ color: #D5D5D5;
     color: white;
     
 }
+
+.grpoDetails{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-bottom: 20px;
+ padding-top: 25px;
+}
+
+.grpoDetails span:nth-child(1){
+    font-weight: 600;
+}
+
+.grpActionView{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.grpActionView button:nth-child(1){
+    background-color: orange;
+    border: none;
+    margin-right:30px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 150px;
+    height: 45px;
+}
+
+.grpActionView button:nth-child(2){
+    background-color: red;
+    border: none;
+    margin-right:30px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 150px;
+    height: 45px;
+}
+
+.approveClosedGrp{
+    background-color: orange;
+    border: none;
+    margin-right:10px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px; 
+}
+
+.rejectClosedGrp{
+    background-color: red;
+    border: none;
+    margin-right:30px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+}
+
+.userProfilePic{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-position: center;
+
+}
+
+.closedGRpRequests{
+    background-color: white;
+    padding: 40px;
+    width: 80vw;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.makeUseranAdmin button{
+border: 0;
+background-color: orange;
+color: white;
+width: fit-content;
+padding: 5px 10px 5px 10px;
+border-radius: 5px;
+font-weight: 600;
+}

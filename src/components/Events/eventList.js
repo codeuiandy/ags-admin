@@ -6,29 +6,60 @@ import ComfirmModal from '../Modals/comfirmModal'
 import UserRoute from '../UserRoute/Route'
 
 export default class eventList extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            eventDate:"recentEvents"
+        }
+    }
+    
+
+    handleChange  =  (e) => {
+      e.preventDefault();
+      this.setState({ [e.target.name]: e.target.value });
+    }
     render() {
+        
         return (
             <div>
                 <Layout RouteUserLayout={
 					this.props.history
 				} page="event-list" activepage="keepOpenEvents">
-                <UserRoute Route="All" destination="Events" />
-                <br/>
-                <h1 className="eventListHeader">Upcoming Events</h1>
+                
+                <div class="form-group seletEventRecent">
+      <select
+  value={this.state.eventFee}
+  name="eventDate"
+ onChange={this.handleChange}
+      class="form-control" id="exampleFormControlSelect1">
+          <option value="recentEvents">Recent Events</option>
+         <option value="previousEvents">Previous Event</option>
+        
+      </select>
+    </div>
 
-                <div id="event-list-wraper">
-                <UpcomingEventTable/>
+{
+    this.state.eventDate === "recentEvents" ?(
+        <div  id="event-list-wraper">
+                    
+        <h1 style={{marginTop:"-24px"}} className="eventListHeader">Upcoming Events</h1>
+
+        <UpcomingEventTable/>
+      
+        </div>  
+    ):(
+        <div  id="event-list-wraper">
+                    
+        <h1 style={{marginTop:"-24px"}} className="eventListHeader">Previous Events</h1>
+
+        <UpcomingEventTable/>
+      
+        </div>  
+    )
+}
+
+               
               
-                </div>  
-                <br/>
-                <h1 className="eventListHeader">Previous Events</h1>
-             
-                <div id="event-list-wraper">
-                  
-                <PreviousEventTable/>
-              
-                </div>  
-                <br/>
                 
                 </Layout>
                 <ComfirmModal/>
