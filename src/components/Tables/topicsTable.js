@@ -13,81 +13,98 @@ export default class topicsTable extends Component {
 		const datas = [
 
 			{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				topicName: <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
+				posts: "81",
 			
 			},
 
 			{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
+				posts: "81",
 			
 			},
 
 			{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				posts: "81",
 			
 			},	{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				posts: "81",
 			
 			},	{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
+				posts: "81",
 			
 			},	{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				posts: "81",
 			
 			},
 			{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
+				posts: "81",
 			
 			},
 			{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
+				posts: "81",
 			
 			},
 			{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
+				posts: "81",
 			
 			},
 			{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
-				openORclsoe:<a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
+				posts: "81",
 			
 			},
 			{
-				topicName: "Ladies Talk",
-				Createdby: "Ade John",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "http://example.com/?bells=baseball&agreement=bird",
+				topicName:  <Link to="">Technology</Link>,
+				Createdby: "Nwachukwu Davis",
+				posts: "81",
 			
 			},
+
+		{	action: (
+				<a>
+
+<Link >
+						{" "}
+						<span
+						style={{fontSize:"14px"}}
+							className="edit"
+							className="fas fa-eye mr-4 add-cursor"
+						></span>
+					</Link>
+
+				
+                          
+					<span
+					style={{fontSize:"14px"}}
+						className="del"
+					
+						className="fa fa-trash mr-4 add-cursor"
+					></span>
+
+
+
+				</a>)}
 
 			
 		];
@@ -98,7 +115,30 @@ export default class topicsTable extends Component {
 			openORclsoe: data.openORclsoe,
 			posts: data.posts,
 			location: data.location,
+			action: (
+				<a>
 
+<Link to="" >
+						{" "}
+						<span
+						style={{fontSize:"14px"}}
+							className="edit"
+							className="fas fa-edit mr-4 add-cursor"
+						></span>
+					</Link>
+
+				
+                          
+					<span
+					style={{fontSize:"14px"}}
+						className="del"
+					
+						className="fa fa-trash mr-4 add-cursor"
+					></span>
+
+
+
+				</a>)
 		
 		}));
 		return body;
@@ -107,7 +147,7 @@ export default class topicsTable extends Component {
 	header = () => {
 		const header = [
 			{
-				title: "Topic Name (filterable)",
+				title: "Group Name (filterable)",
 				prop: "topicName",
 				sortable: true,
 				filterable: true,
@@ -116,14 +156,14 @@ export default class topicsTable extends Component {
 			sortable: true,
 			filterable: true,},
 
-			{ title: "Open/Close ", prop: "openORclsoe" ,
-			},
+			
 
 			{ title: "Posts", prop: "posts" ,
 			},
 
 			
-
+			{ title: "Action", prop: "action" ,
+		},
 		
 		];
 		return header;

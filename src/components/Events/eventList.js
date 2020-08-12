@@ -32,7 +32,7 @@ export default class eventList extends Component {
   name="eventDate"
  onChange={this.handleChange}
       class="form-control" id="exampleFormControlSelect1">
-          <option value="recentEvents">Recent Events</option>
+          <option value="recentEvents">Upcoming Events</option>
          <option value="previousEvents">Previous Event</option>
         
       </select>
@@ -45,7 +45,7 @@ export default class eventList extends Component {
         <h1 style={{marginTop:"-24px"}} className="eventListHeader">Upcoming Events</h1>
 
         <UpcomingEventTable/>
-      
+      <br/>
         </div>  
     ):(
         <div  id="event-list-wraper">
@@ -53,7 +53,7 @@ export default class eventList extends Component {
         <h1 style={{marginTop:"-24px"}} className="eventListHeader">Previous Events</h1>
 
         <UpcomingEventTable/>
-      
+      <br/>
         </div>  
     )
 }

@@ -24,6 +24,7 @@ import AllReportedUsers from './components/Users/allReportedUsers'
 import UserInfo from './components/Users/userInfo'
 import ViewGroup from './components/Groups/viewGroup'
 import GroupMembers from './components/Groups/grpMembers'
+import EventOverview from "./components/Events/eventOverview";
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
 						<Route exact path="/user_info" component={UserInfo} />
 						<Route exact path="/view_group" component={ViewGroup} />
 						<Route exact path="/group_members" component={GroupMembers} />
+						<Route exact path="/event_overview" component={EventOverview} />
 				</Switch>
 			</Router>
 		</div>

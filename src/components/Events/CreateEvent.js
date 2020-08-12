@@ -179,47 +179,6 @@ export default class CreateEvent extends Component {
       </div>
     ) : ""
   }
-  
-  {/* {
-    this.state.eventType === "freeEvent" || this.state.eventType === "externalEvent" ? (
-      <div>
-<div class="form-group">
-    <label for="register">Registration Link</label>
-    <input type="text" class="form-control" id="register" placeholder="Event registration link"/>
-
-  </div>
-</div>
-    )
-    :""
-  } */}
-
-{/* 
-{
-    this.state.eventType === "externalEvent" ? (
-      <div>
- <div class="form-group">
-<label for="price">Price</label>
-<input type="number" class="form-control" id="price" placeholder="Event fee"/>
-</div>
-</div>
-    )
-    :""
-  }
-
-{
-    this.state.eventType === "paidEvent" ? (
-      <div>
- <div class="form-group">
-<label for="price">Price</label>
-<input type="number" class="form-control" id="price" placeholder="Event fee"/>
-</div>
-</div>
-    )
-    :""
-  } */}
-
-
-
 
   <div class="form-group">
     <label for="exampleFormControlSelect1">Medium</label>
@@ -255,46 +214,59 @@ export default class CreateEvent extends Component {
 <div className="datePickerEvent">
 <div class="form-group">
     <label for="Presenter">Event Start Date</label>
-    <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
-    showTimeSelect
-      timeFormat="HH:mm"
-      timeIntervals={15}
-      timeCaption="time"
-      dateFormat="MMMM d, yyyy h:mm aa"/>
+    <DatePicker
+      closeOnScroll={true}
+      selected={this.state.startDate} 
+      onChange={date => this.setState({startDate:date})  }
+      withPortal
+ 
+      minDate={new Date()}
+    />
   </div>
 
 
   <div class="form-group">
     <label for="Presenter">Event End Date</label>
-    <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
-    showTimeSelect
-      timeFormat="HH:mm"
-      timeIntervals={15}
-      timeCaption="time"
-      dateFormat="MMMM d, yyyy h:mm aa"/>
+      <DatePicker
+      closeOnScroll={true}
+      selected={this.state.startDate} 
+      onChange={date => this.setState({startDate:date})  }
+      withPortal
+ 
+      minDate={new Date()}
+    />
   </div>
+
+  
 </div>
 
 <div className="datePickerEvent">
 <div class="form-group">
     <label for="Presenter">Event Start Time</label>
-    <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
-    showTimeSelect
-      timeFormat="HH:mm"
+
+    <DatePicker
+      selected={this.state.startDate} 
+      onChange={date => this.setState({startDate:date})  } 
+      showTimeSelect
+      showTimeSelectOnly
       timeIntervals={15}
-      timeCaption="time"
-      dateFormat="MMMM d, yyyy h:mm aa"/>
+      timeCaption="Time"
+      dateFormat="h:mm aa"
+    />
   </div>
 
 
   <div class="form-group">
     <label for="Presenter">Event End Time</label>
-    <DatePicker selected={this.state.startDate} onChange={date => this.setState({startDate:date})  } 
-    showTimeSelect
-      timeFormat="HH:mm"
+    <DatePicker
+      selected={this.state.startDate} 
+      onChange={date => this.setState({startDate:date})  } 
+      showTimeSelect
+      showTimeSelectOnly
       timeIntervals={15}
-      timeCaption="time"
-      dateFormat="MMMM d, yyyy h:mm aa"/>
+      timeCaption="Time"
+      dateFormat="h:mm aa"
+    />
   </div>
 </div>
  

@@ -68,7 +68,7 @@
 .allTopics{
     padding: 50px;
     background-color: white;
-    width: fit-content;
+    width:100%;
     margin-bottom: 40px;
     border-radius: 5px;
 }

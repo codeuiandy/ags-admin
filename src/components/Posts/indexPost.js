@@ -4,6 +4,7 @@ import ImageIcon from './Vector.png'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import UserRoute from '../UserRoute/Route'
+import {Images} from './selectMutipleImages'
 
 export default class indexPost extends Component {
     constructor(props){
@@ -49,7 +50,7 @@ export default class indexPost extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenPosts" page="create_posts">
-                <UserRoute Route="Create" destination="Posts" />
+             
                 <div className="postsRoutes">
                     <div onClick={(e)=>{this.SwitchPostType("post")}} className={`postTypes1 
                     ${Switch === "post" ? "activePost" : ""}`} >
@@ -132,7 +133,7 @@ export default class indexPost extends Component {
 
  <div class="form-group postForm postFormAdvert">
  
- <input placeholder="Insert Link" class="form-control" type="text"/>
+<Images/>
 </div>
 
  </form>

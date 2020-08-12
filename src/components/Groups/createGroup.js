@@ -8,30 +8,14 @@ export default class createGroup extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } page="create-group" activepage="keepOpenGroup">
-                <UserRoute Route="Create" destination="Group" />
-                <br/>
+               
+               
                 <div className="create-grp">
                     <div className="grp1">
                      <label>Group Name</label>
                      <input type="text"/>
                     </div>
 
-                    <div className="grp2">
-                        <span>Avater</span>
-                        <span className="avartarCircle">
-                        <i class="fa fa-user" aria-hidden="true"></i>
-
-                        </span>
-                        <span className="createGrpinput">
-                             <input type="file"/>   
-
-                        </span>
-
-                        <div className="chsFilebtn">
-                        <button>Choose File</button>
-                        </div>
-                    
-                    </div>
 
                     <div className="grp3">
                         <input type="file"/>
@@ -53,8 +37,23 @@ export default class createGroup extends Component {
                         </div>
 
                         <div className="createGRpBTN">
-                            <button>Create Group</button>
+                            <div>
+                            <div class="form-group">
+    <label for="interval">Open Or Closed Group?</label>
+    <select class="form-control" id="interval">
+    
+      <option>Open Group</option>
+      <option>Closed Group</option>
+     
+    </select>
+  </div>
+                            </div>
+                          
                         </div>
+                        <div className="btnCtreate">
+                            <button >Create Group</button>
+                        </div>
+                        
                 </div>
             </Layout>
         )

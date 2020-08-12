@@ -172,11 +172,21 @@ dropDownEvent:true,
 							
 							<ul className="dropdownlist">
 								
-								<div onClick={()=>{
-									// this.props.RouteUserLayout.push("")
-								}} className="hoverActiveRoute"></div>
-								<li >OverView</li>
-								<li className={`${this.props.page==="create-event"?"activeClass":""}`}>
+
+								<li className={`${this.props.page==="event_overview"?"activeClass":""}`}>
+
+<div onClick={()=>{
+	this.props.RouteUserLayout.push("/event_overview")
+}} className="hoverActiveRoute"></div>
+
+<Link className={`${this.props.page==="event_overview"?"activeClass":""}`} >
+	 Event Overview</Link></li>
+
+
+
+
+								
+								<li className={`${this.props.page==="create_event"?"activeClass":""}`}>
 
 								<div onClick={()=>{
 									this.props.RouteUserLayout.push("/create_event")
