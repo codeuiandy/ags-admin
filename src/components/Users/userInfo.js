@@ -134,7 +134,7 @@ export default class userInfo extends Component {
                 {
                 Switch === "profile" ? (
                     <div>
-                     <div className="userProfile">
+                     <div className="userProfile tab1">
                      <div className="userinfoName">
                 <div className="main-username347">
                     <h1>
