@@ -251,6 +251,14 @@ dropDownEvent:true,
 									Create Post</Link></li>
 
 									<div onClick={()=>{
+									this.props.RouteUserLayout.push("/all_feeds")
+								}} className="hoverActiveRoute"></div>
+
+									<li className={`${this.props.page==="all_feeds"?"activeClass":""}`}> <Link 
+								className={`${this.props.page==="all_feeds"?"activeClass":""}`} to="/all_feeds">
+									All Feeds</Link></li>
+
+									<div onClick={()=>{
 									this.props.RouteUserLayout.push("/reported_posts_table")
 								}} className="hoverActiveRoute"></div>
 

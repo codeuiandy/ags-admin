@@ -56,8 +56,7 @@ export default class allReportedUsers extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="reportedUsers" page="reportedUsers">
-                <PageRouteInfo Route="Reported" destination="Users"/>
-                <br/>
+               
                 <div className="allusersWrap">
                 <AllReportedUser allReportedUser={this.state.allReportedUser}
                 

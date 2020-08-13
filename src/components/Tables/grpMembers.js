@@ -13,7 +13,7 @@ export default class grpMembers extends Component {
 		const datas = [
 
 			{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
@@ -22,7 +22,7 @@ export default class grpMembers extends Component {
 			},
 
 			{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
@@ -31,28 +31,28 @@ export default class grpMembers extends Component {
 			},
 
 			{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
 				posts: "81",
 			
 			},	{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
 				posts: "81",
 			
 			},	{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
 				posts: "81",
 			
 			},	{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
@@ -60,15 +60,7 @@ export default class grpMembers extends Component {
 			
 			},
 			{
-                groupname: "Okeke Mandela",
-                userImage:<img className="userProfilePic" src={Profolepic} />,
-				joinOn: "21/12/2020",
-				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
-				posts: "81",
-			
-			},
-			{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
@@ -76,7 +68,15 @@ export default class grpMembers extends Component {
 			
 			},
 			{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
+                userImage:<img className="userProfilePic" src={Profolepic} />,
+				joinOn: "21/12/2020",
+				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
+				posts: "81",
+			
+			},
+			{
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
@@ -84,7 +84,7 @@ export default class grpMembers extends Component {
 			
 			},
 			{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
@@ -92,7 +92,7 @@ export default class grpMembers extends Component {
 			
 			},
 			{
-                groupname: "Okeke Mandela",
+                groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
 				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
@@ -165,6 +165,10 @@ export default class grpMembers extends Component {
 
 	header = () => {
 		const header = [
+
+			{ title: "User Image", prop: "userImage" ,
+		},
+		
 			{
 				title: "Name (filterable)",
 				prop: "groupname",
@@ -172,8 +176,7 @@ export default class grpMembers extends Component {
 				filterable: true,
             },
             
-            { title: "User Image", prop: "userImage" ,
-			},
+           
             
 			{ title: "Joined On", prop: "joinOn" ,
 			sortable: true,

@@ -4,12 +4,14 @@ import ImageIcon from './Vector.png'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {Images} from './selectMutipleImages'
-
-export default class indexPost extends Component {
+import PostToFeed from '../Tables/allFeedsTable/feedToPost'
+import Icebreaker from '../Tables/allFeedsTable/icebreaker'
+import AskQuestion from '../Tables/allFeedsTable/askAQuestion'
+export default class allFeeds extends Component {
     constructor(props){
         super(props)
         this.state={
-            postController:"Advert",
+            postController:"post",
             startDate:new Date(),
         }
     }
@@ -48,7 +50,7 @@ export default class indexPost extends Component {
            
             <Layout RouteUserLayout={
                 this.props.history
-            } activepage="keepOpenPosts" page="create_posts">
+            } activepage="keepOpenPosts" page="all_feeds">
              
                 <div className="postsRoutes">
                     <div onClick={(e)=>{this.SwitchPostType("post")}} className={`postTypes1 
@@ -82,30 +84,8 @@ export default class indexPost extends Component {
 
                 {
                 Switch === "post" ? (
-                    <div>
-                     <div className="createPosts ">
-                           <div className="createPostInner">
-                           <form>
-  <div class="form-group postForm">
-  
-    <textarea placeholder="Type in your post" class="form-control" id="aboutPlan"/>
-  </div>
-  </form>
-
-  <div className="postActions">
-      <div className="postAction">
-          <input type="file"/>
-<span>
-    <img src={ImageIcon} alt=""/>
-</span>
-      </div>
-
-      <div className="postButton">
-<button> Create</button>
-      </div>
-  </div>
-                           </div>
-                        </div>
+                    <div className="postTofeedLayout">
+                    <PostToFeed/>
                     </div>
                 ) : ""
                 }
@@ -181,28 +161,9 @@ export default class indexPost extends Component {
                             
 {
                 Switch === "Icebreaker" ? (
-                    <div>
-                       <div className="createPosts">
-                           <div className="createPostInner">
-                           <form>
-  <div class="form-group postForm">
-  
-    <textarea placeholder="Type your icebreaker question here" class="form-control" id="aboutPlan"/>
-  </div>
-  </form>
-
-  <div className="postActions">
-      <div className="postAction">
-          <input type="file"/>
-
-      </div>
-
-      <div className="postButton">
-<button> Create</button>
-      </div>
-  </div>
-                           </div>
-                        </div>
+                    <div className="postTofeedLayout">
+                      
+                      <Icebreaker/>
                     </div>
                 ) : ""
                 }
@@ -211,31 +172,10 @@ export default class indexPost extends Component {
                             
 {
                 Switch === "poll" ? (
-                    <div>
-                    <div className="createPosts">
-                        <div className="createPostInner">
-                        <form>
-<div class="form-group postForm">
-
- <textarea placeholder="Type your question here" class="form-control" id="aboutPlan"/>
-</div>
-</form>
-
-<div className="postActions">
-   <div className="postAction">
-       <input type="file"/>
-{/* <span>
- <img src={ImageIcon} alt=""/>
-</span> */}
-   </div>
-
-   <div className="postButton">
-<button> Create</button>
-   </div>
-</div>
-                        </div>
-                     </div>
-                 </div>
+                    <div className="postTofeedLayout">
+                      
+                    <AskQuestion/>
+                  </div>
                 ) : ""
                 }
 

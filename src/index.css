@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: red;
 }
 
 code {
@@ -36,38 +37,6 @@ textarea
 }
 
 .table-responsive{
-  min-width: 78vw !important;
+  min-width: 70vw !important;
 }
 
-.daypqs{
-  /* background: white !important; */
-  border: 1px solid white;
-  height: 100px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 0;
-    border: 1px solid rgba(196, 196, 196, 0.6);
-    height: 70px;
-    outline: none !important;
-    background: rgba(228, 228, 228, 0.2) !important;
-    padding-top: 5px !important;
-}
-.eJEChV div svg:first-child{
-  background: orange !important;
-  color: aliceblue;
-}
-
-.daypqs span{
-
- color: orange !important;
- margin-top: 0 !important;
- padding-top: 0 !important;
-}
-
-.daypqs img{
-  height: 40px;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
- }

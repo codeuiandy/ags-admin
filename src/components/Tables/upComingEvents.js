@@ -67,7 +67,7 @@ export default class upComingEvents extends Component {
 			Description:data.Description,
 			EventStartTime:data.EventStartTime,
 			EventEndTime:data.EventEndTime,
-			PaidEvent:data.EventEndTime,
+			PaidEvent:data.PaidEvent,
 			action: (
 				<a>
 					<Link to="/view_event">
@@ -111,7 +111,7 @@ export default class upComingEvents extends Component {
 		const header = [
 
 			{
-				title: "Event Name",
+				title: "Event Type",
 				prop: "type",
 				sortable: true,
 				filterable: true,

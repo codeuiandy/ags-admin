@@ -5,6 +5,7 @@ display: none !important;
 table tbody td{
     color: #707683;
     font-size: 15px;
+    border: 1px solid #ececffc7 !important;
 }
 
 table thead tr td{
@@ -15,4 +16,5 @@ table thead tr td{
     font-size: 15px;
     padding: 10px 5px 10px 8px !important;
     margin: 0 !important;
+    border: 1px solid #ececffd5 !important;
 }

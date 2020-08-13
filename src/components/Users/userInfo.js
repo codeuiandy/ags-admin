@@ -93,10 +93,10 @@ export default class userInfo extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenUsers" page="usersOverview">
-                <UserRoute Route="User" destination="Profile" />
+                
               
 
-                <div className="postsRoutes userProfileRoute">
+                <div className="postsRoutes ">
                     <div onClick={(e)=>{this.SwitchPostType("profile")}} className={`postTypes1 
                     ${Switch === "profile" ? "activePost" : ""}`} >
                         Profile

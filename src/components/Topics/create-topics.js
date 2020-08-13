@@ -10,8 +10,7 @@ export default class createTopics extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenTopics" page="create_topic">
-                        <UserRoute Route="Create" destination="Topic" />     
-                        <br/>                      
+                    
                 <div className="topics-page">
                     <h1>Add Topic</h1>
                     <hr/>

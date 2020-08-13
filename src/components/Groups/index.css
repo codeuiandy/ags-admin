@@ -313,6 +313,7 @@ color: #D5D5D5;
     'gridHeader1 gridHeader2   gridHeader4'
     'griddata1 griddata2  griddata4'
     ;
+    justify-content: space-between;
 }
 
 .grpInfo1 ul{
@@ -326,10 +327,25 @@ color: #D5D5D5;
     font-size: 14px;
     line-height: 25px;
     /* or 179% */
-    
-    
-    color: #002333;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #5c6287;
+    font-weight: 400;
 }
+
+
+.grpInfo1 ul li a{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    /* or 179% */
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: #5c6287;
+    font-weight: 400;
+}
+
 
 
 .grpInfoChildHeader1{

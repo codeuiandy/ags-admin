@@ -35,12 +35,7 @@ export default class userPosts extends Component {
 					</Link>
 
 				
-						{" "}
-						<span
-						style={{fontSize:"14px"}}
-							className="edit"
-							className="far fa-edit mr-4 add-cursor"
-						></span>
+					
 					
                           
 					<span

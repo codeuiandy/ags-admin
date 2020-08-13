@@ -22,9 +22,7 @@ export default class index extends Component {
 					this.props.history
 				}  page="dashboard">
 			
-					<div style={{marginLeft:"10px"}}>
-	<UserRoute  Route="User" destination="Overview" / >
-					</div>
+					
 				
 				
 					<OVERVIEW />

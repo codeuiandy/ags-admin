@@ -10,7 +10,7 @@ export default class group extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenGroup" page="groups-overview" >
-                 <UserRoute Route="Group" destination="Overview" />
+     
              
               <div className="createGrpbtn8">
                   <button> <Link to="/create_group">Create Group</Link></button>

@@ -10,7 +10,7 @@ export default class topicsOverview extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenTopics" page="groups-overview" >
-                <UserRoute Route="Topics" destination="Overview" />
+               
            
               <div className="createGrpbtn8">
                   <button> <Link to="/create_topic">Create Topic</Link></button>

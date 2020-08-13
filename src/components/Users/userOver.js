@@ -1,85 +1,61 @@
-import React, { Component } from 'react';
-import '../Posts/post.css'
+
+import React, { Component } from 'react'
 import Layout from '../Layout/index'
-import Newusers from './newUsers'
-import ReportedUsers from './reportedUsers'
-import UserRoute from '../UserRoute/Route'
-import FewUsers from '../Tables/fewUsersers'
 import './index.css'
-class userOver extends Component {
-    constructor(props){
-        super(props)
-        this.state={
-            fewUsers:[{
-                name:"John Dooe",
-                email:"codeuiandy@gmail.com",
-                joined:"Paid",
-                registrationDate:"12/12/2020",
-                recentActivity:"12/2/2020"
-            },
-            {
-                name:"John Dooe",
-                email:"codeuiandy@gmail.com",
-                joined:"Paid",
-                registrationDate:"12/12/2020",
-                recentActivity:"12/2/2020"
-            },
-
-            {
-                name:"Rohn kooe",
-                email:"codeuiandy@gmail.com",
-                joined:"Paid",
-                registrationDate:"12/12/2020",
-                recentActivity:"12/2/2020"
-            }
-
-            ,{
-                name:"kohn Dooe",
-                email:"codeuiandy@gmail.com",
-                joined:"Paid",
-                registrationDate:"12/12/2020",
-                recentActivity:"12/2/2020"
-            },{
-                name:"cohn Dooe",
-                email:"codeuiandy@gmail.com",
-                joined:"Paid",
-                registrationDate:"12/12/2020",
-                recentActivity:"12/2/2020"
-            },{
-                name:"bohn Dooe",
-                email:"codeuiandy@gmail.com",
-                joined:"Paid",
-                registrationDate:"12/12/2020",
-                recentActivity:"12/2/2020"
-            }
-        ]
-        }
-    }
+import {Link} from 'react-router-dom'
+import UsersUpdates from './userUpdates'
+import UserRoute from '../UserRoute/Route'
+export default class group extends Component {
     render() {
         return (
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenUsers" page="usersOverview">
-                 <UserRoute Route="Post" destination="Overview" />
-                 <br/>
-                <div className="postsOverview">
-                    <div className="postChart1">
-                        <Newusers />
-                    </div>
-                    <div className="postChart2">
-                    <ReportedUsers />
-                    </div>
-                </div>
-                <div className="listOfusers">
-                    <span>List Of Users</span> <span className="seeAllGrps">See all</span>
-                </div>
-                <div className="fewUserWrap">
-                      <FewUsers fewUsers={this.state.fewUsers} />
-                </div>
               
+             
+
+                <div className="grp-overview">
+    <div className="grp-overview1">
+    <h1>Invites Sent</h1>
+    <p>23</p>
+    </div>
+
+    <div className="grp-overview1">
+    <h1>  
+
+    Invites Accepted</h1>
+   
+<p>12</p>
+
+
+        </div>
+
+        <div className="grp-overview1">
+       
+        <h1>  Active Users</h1>
+<p>12</p>
+        </div>
+
+
+        <div className="grp-overview1">
+       
+
+        <h1>  Inactive Users</h1>
+<p>12</p>
+        </div>
+
+        <div className="grp-overview1">
+       
+
+       <h1>  All Users</h1>
+<p>1223</p>
+       </div>
+</div>
+               
+<div className="grp-overview-table">
+<UsersUpdates/>
+</div>
             </Layout>
-        );
+        )
     }
 }
-
-export default userOver;

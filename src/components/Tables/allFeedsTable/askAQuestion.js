@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Profolepic from '../Tables/profilePic.jpg'
-import Table from "../Tables/customTable";
+import Profolepic from '../profilePic.jpg'
+import Table from "../customTable";
 import { Link } from "react-router-dom";
 
-export default class allPosts extends Component {
+export default class askAQuestion extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -131,17 +131,12 @@ export default class allPosts extends Component {
 
 	header = () => {
 		const header = [
-			{
-				title: "Post Avatar",
-				prop: "postTofeedIMG",
-				sortable: true,
-				filterable: true,
-			},
+		
 			{ title: "Created By (filterable)", prop: "Createdby" ,
 			sortable: true,
 			filterable: true,},
 
-			{ title: "Post", prop: "postdata" ,
+			{ title: "Questions", prop: "postdata" ,
 			},
 
 			{ title: "Date Added", prop: "postsDate" ,

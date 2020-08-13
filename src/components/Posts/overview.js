@@ -110,10 +110,10 @@ if (actviveChart === "yearlyChart") {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenPosts" page="postOverview">
-                 <UserRoute Route="Post" destination="Overview" />
-                 <br/>
+                
                 <div className="postsOverview">
                     <div className="postChart1">
+                    <h1>New Posts</h1>
                         <div className="switchChart">
                             <span onClick={()=>{this.SwitchChart("weeklyChart")}} className={`weeklyChart ${this.state.actviveChart === "weeklyChart" ? "activeChart" :""}`}>Weekly Post</span>
                             <span onClick={()=>{this.SwitchChart("mothlyChart")}}   className={`weeklyChart ${this.state.actviveChart === "mothlyChart" ? "activeChart" :""}`}>Monthly</span>
@@ -154,9 +154,11 @@ if (actviveChart === "yearlyChart") {
 
 
                     <div className="postChart2">
+                    <h1>Reported Posts</h1>
                         <div className="switchCharcts">
                             <span onClick={()=>{this.reportedChartSwitchChart("reportedChartweeklyChart")}} className={` ${this.state.reportedChart === "reportedChartweeklyChart" ? "reportedCharts" :""}`}>Weekly Post</span>
                             <span onClick={()=>{this.reportedChartSwitchChart("reportedChartmothlyChart")}}   className={` ${this.state.reportedChart === "reportedChartmothlyChart" ? "reportedCharts" :""}`}>Monthly</span>
+                            
                             <span style={{paddingRight:"30px"}} onClick={()=>{this.reportedChartSwitchChart("reportedChartyearlyChart")}}   className={` ${this.state.reportedChart === "reportedChartyearlyChart" ? "reportedCharts" :""}`}>Yearly</span>
                         </div>
                         {
@@ -193,7 +195,7 @@ if (actviveChart === "yearlyChart") {
 
                 <div className="allPostsOverview">
                     <br/>
-<AllPosts allUsers={this.state.allUsers} />
+<AllPosts  />
                 </div>
                 
             </Layout>
