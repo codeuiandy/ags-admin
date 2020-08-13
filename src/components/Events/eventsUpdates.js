@@ -40,13 +40,13 @@ export default class GrpUpdates extends Component {
                   
                     <div className="grpInfoChild4">
                     <ul>
-                            <li><Link to="/view_group">Led Zeppelin </Link></li>
-                            <li><Link to="/view_group">Deep Purple </Link></li>
-                            <li><Link to="/view_group">Black Sabbath</Link> </li>
-                            <li><Link to="/view_group">The Who The Eagles</Link> </li>
-                            <li><Link to="/view_group">The Doors Pink Floyd </Link></li>
+                            <li><Link to="/view_event">Led Zeppelin </Link></li>
+                            <li><Link to="/view_event">Deep Purple </Link></li>
+                            <li><Link to="/view_event">Black Sabbath</Link> </li>
+                            <li><Link to="/view_event">The Who The Eagles</Link> </li>
+                            <li><Link to="/view_event">The Doors Pink Floyd </Link></li>
                            
-                            <li><Link to="/all_groups">View More</Link></li>
+                            <li><Link to="/event_list">View More</Link></li>
                         </ul>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ export default class viewEvent extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenEvents">
-                <div style={{borderRadius:"5px",paddingTop:"30px",marginBottom:"40px"}} id="event-list-wraper">
+                <div style={{borderRadius:"5px",paddingTop:"30px",marginBottom:"40px"}} id="event-list-wraper2">
                     <div className="view-event">
                         <h1>Ted Talk @ MUSON</h1>
                         <img src={EventImage} alt="" srcset=""/>
