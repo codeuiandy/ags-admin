@@ -16,14 +16,14 @@ export default class topicsTable extends Component {
 				topicName: <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				posts: "81",
-			
+			followers:"340"
 			},
 
 			{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				posts: "81",
-			
+				followers:"340"
 			},
 
 			{
@@ -31,54 +31,55 @@ export default class topicsTable extends Component {
 				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
 				posts: "81",
-			
+				followers:"340"
 			},	{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
 				posts: "81",
+				followers:"340"
 			
 			},	{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				posts: "81",
-			
+				followers:"340"
 			},	{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				openORclsoe: "Close",
 				posts: "81",
-			
+				followers:"340"
 			},
 			{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				posts: "81",
-			
+				followers:"340"
 			},
 			{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				posts: "81",
-			
+				followers:"340"
 			},
 			{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				posts: "81",
-			
+				followers:"340"
 			},
 			{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				posts: "81",
-			
+				followers:"340"
 			},
 			{
 				topicName:  <Link to="">Technology</Link>,
 				Createdby: "Nwachukwu Davis",
 				posts: "81",
-			
+				followers:"340"
 			},
 
 		{	action: (
@@ -115,6 +116,7 @@ export default class topicsTable extends Component {
 			openORclsoe: data.openORclsoe,
 			posts: data.posts,
 			location: data.location,
+			followers:data.followers,
 			action: (
 				<a>
 
@@ -147,7 +149,7 @@ export default class topicsTable extends Component {
 	header = () => {
 		const header = [
 			{
-				title: "Group Name (filterable)",
+				title: "Title (filterable)",
 				prop: "topicName",
 				sortable: true,
 				filterable: true,
@@ -161,6 +163,9 @@ export default class topicsTable extends Component {
 			{ title: "Posts", prop: "posts" ,
 			},
 
+			{ title: "Followers", prop: "followers" ,
+		},
+			
 			
 			{ title: "Action", prop: "action" ,
 		},

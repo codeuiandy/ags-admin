@@ -38,8 +38,8 @@ export default class index extends Component {
 					<Navbar handleSideBar={this.toggleSideBar} />
 					<Sidebar RouteUserLayout={this.props.RouteUserLayout} activepage={this.props.activepage} page={this.props.page} sidebarShow={sidebarShow} SidebarDefault={SidebarDefault} />
 					<div className="centra-margin">
-						
-	{this.props.children}
+						<div style={{cursor:"pointer",width:"100px"}} onClick={()=>{this.props.RouteUserLayout.goBack()}}>"back"</div>
+	                {this.props.children}
 					
 					
 						</div>

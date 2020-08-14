@@ -12,7 +12,9 @@ export default class viewGroup extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenGroup" page="groups-overview" >
-                
+
+                <div className="viewgroupTitle"> <h1>Bright Minds Fish Club</h1></div>
+               
                 <div className="grp-overview">
     <div className="grp-overview1">
     <h1>  Total Posts</h1>
@@ -54,8 +56,9 @@ export default class viewGroup extends Component {
 <div className="grp-overview-table">
 <ViewGrpStatictics/>
 </div>
-
+<div className="viewgroupTitle" style={{marginBottom:"20px",marginTop:"-20px",marginLeft:"3px"}}> <h1>Group Join Request</h1></div>
       <div className="closedGRpRequests">
+          
           <ClosedGrpRequests/>
           </div>
             </Layout>

@@ -155,6 +155,7 @@ font-weight: 500;
     height: fit-content;
     margin-bottom: 20px;
     padding-bottom: 50px;
+    margin-top: 15px;
 }
 
 #event-wraper label{
@@ -171,6 +172,8 @@ font-weight: 500;
     padding: 50px;
     background-color: white;
     border-radius: 5px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 
@@ -433,18 +436,20 @@ font-weight: 700;
 
 .eventForm input::placeholder{
 font-size: 15px;
-color: rgba(128, 128, 128, 0.5);
+color: rgba(128, 128, 128, 0.315);
+opacity: 0.9;
 }
 
 .eventForm textarea::placeholder{
     font-size: 15px;
- color: rgba(128, 128, 128, 0.616);
+    color: rgba(128, 128, 128, 0.315);
+    opacity: 0.9;
     }
 
     
 .eventForm select{
     font-size: 15px;
- color: rgba(128, 128, 128, 0.616);
+ color: rgba(128, 128, 128, 0.253);
     cursor: pointer;
     }
 
@@ -467,4 +472,5 @@ color: rgba(128, 128, 128, 0.5);
         justify-content: center;
         height: fit-content;
         padding-bottom: 70px;
+        margin-top: 15px;
     }

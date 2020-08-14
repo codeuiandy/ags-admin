@@ -9,11 +9,15 @@ export default class CreateEvent extends Component {
         super(props)
         this.state={
             startDate:new Date(),
-            eventType:"internal",
+            endDate:new Date(),
+            startTime:new Date(),
+            endTime:new Date(),
+            eventType:"null",
             eventMedium:"",
-            eventFee:"freeEvent",
+            eventFee:"null",
             CTA:"Pay"
         }
+        console.log(this.state.startDate)
     }
     
 
@@ -72,6 +76,41 @@ export default class CreateEvent extends Component {
   </div>
 
 
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Medium</label>
+    <select
+    value={this.state.eventMedium}
+    name="eventMedium"
+   onChange={this.handleChange} 
+      class="form-control"
+       id="exampleFormControlSelect1">
+         <option value="null">Select Event Medium</option>
+      <option value="inperson">In-Person</option>
+      <option value="virtual">Virtual</option>
+      <option value="hybrid">Hybrid</option>
+      
+    </select>
+  </div>
+
+{
+  this.state.eventMedium === "virtual" || this.state.eventMedium === "hybrid" ? (
+    <div class="form-group">
+    <label for="address">Enter Link</label>
+    <input type="text" class="form-control" id="address" placeholder="eg https://zoom.com"/>
+  </div>
+  ) : ""}
+
+{
+  this.state.eventMedium === "hybrid" || this.state.eventMedium === "inperson"  ? 
+  (
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" class="form-control" id="address" placeholder="Enter Event Venue"/>
+    </div>   
+    )
+  : ""}
+
   <div class="form-group">
     <label for="exampleFormControlSelect1">Event Type</label>
     <select
@@ -79,6 +118,7 @@ export default class CreateEvent extends Component {
      name="eventType"
     onChange={this.handleChange} 
     class="form-control" id="exampleFormControlSelect1">
+       <option value="null">Select Event Type</option>
         <option value="internal">Internal</option>
       <option value="external">External Event</option>
 
@@ -108,13 +148,20 @@ export default class CreateEvent extends Component {
 {
     this.state.eventType === "internal" & this.state.eventFee === "freeEvent" ?(
       <div>
+  <div class="form-group">
+<label for="register">CTA Button</label>
+    <input type="text" class="form-control" id="register" placeholder="e.g Register, Attend"/>
 
+
+  </div>
 
         <div class="form-group">
     <label for="register">Registration Link</label>
     <input type="text" class="form-control" id="register" placeholder="Event registration link"/>
 
   </div>
+
+
       </div>
     ) : ""
   }
@@ -180,36 +227,6 @@ export default class CreateEvent extends Component {
     ) : ""
   }
 
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Medium</label>
-    <select
-    value={this.state.eventMedium}
-    name="eventMedium"
-   onChange={this.handleChange} 
-      class="form-control"
-       id="exampleFormControlSelect1">
-      <option value="inperson">In-Person</option>
-      <option value="virtual">Virtual</option>
-      <option value="hybrid">Hybrid</option>
-      
-    </select>
-  </div>
-
-{
-  this.state.eventMedium === "virtual" || this.state.eventMedium === "hybrid" ? (
-    <div class="form-group">
-    <label for="address">Enter Link</label>
-    <input type="text" class="form-control" id="address" placeholder="eg https://zoom.com"/>
-  </div>
-  ) : ""}
-
-{
-  this.state.eventMedium === "virtual" ? "" : (
-  <div class="form-group">
-    <label for="address">Address</label>
-    <input type="text" class="form-control" id="address" placeholder="Enter Event Venue"/>
-  </div>   
-  )}
  
 <div className="datePickerEvent">
 <div class="form-group">
@@ -217,7 +234,7 @@ export default class CreateEvent extends Component {
     <DatePicker
       closeOnScroll={true}
       selected={this.state.startDate} 
-      onChange={date => this.setState({startDate:date})  }
+      onChange={date => this.setState({startDate:date,endDate:date})  }
       withPortal
  
       minDate={new Date()}
@@ -229,11 +246,11 @@ export default class CreateEvent extends Component {
     <label for="Presenter">Event End Date</label>
       <DatePicker
       closeOnScroll={true}
-      selected={this.state.startDate} 
-      onChange={date => this.setState({startDate:date})  }
+      selected={this.state.endDate} 
+      onChange={date => this.setState({endDate:date})  }
       withPortal
  
-      minDate={new Date()}
+      minDate={this.state.startDate}
     />
   </div>
 
@@ -245,13 +262,14 @@ export default class CreateEvent extends Component {
     <label for="Presenter">Event Start Time</label>
 
     <DatePicker
-      selected={this.state.startDate} 
-      onChange={date => this.setState({startDate:date})  } 
+      selected={this.state.startTime} 
+      onChange={date => this.setState({startTime:date,endTime:date})  } 
       showTimeSelect
       showTimeSelectOnly
       timeIntervals={15}
       timeCaption="Time"
       dateFormat="h:mm aa"
+      
     />
   </div>
 
@@ -259,13 +277,14 @@ export default class CreateEvent extends Component {
   <div class="form-group">
     <label for="Presenter">Event End Time</label>
     <DatePicker
-      selected={this.state.startDate} 
-      onChange={date => this.setState({startDate:date})  } 
+      selected={this.state.endTime} 
+      onChange={date => this.setState({endTime:date})  } 
       showTimeSelect
       showTimeSelectOnly
       timeIntervals={15}
       timeCaption="Time"
       dateFormat="h:mm aa"
+      // minDate={this.state.startTime}
     />
   </div>
 </div>

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
-import Table from "./customTable";
+import Profolepic from '../Tables/profilePic.jpg'
+import Table from "../Tables/customTable";
 import { Link } from "react-router-dom";
 
-export default class reporteddreportedFor extends Component {
+export default class allPosts extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {};
@@ -13,92 +13,117 @@ export default class reporteddreportedFor extends Component {
 		const datas = [
 
 			{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG: <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},
 
 			{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},
 
 			{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},	{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},	{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},	{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},
 			{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},
 			{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},
 			{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},
 			{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon:"12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata:"A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},
 			{
-				Name: "Adedayo Manfo",
-				Email: "codeuuiandy@gmail.com",
-				Reportedon: "12/10/2020",
-				dreportedFor: "Spam",
+				postTofeedIMG:  <img className="userProfilePic" src={Profolepic} />,
+				Createdby: "Nwachukwu Davis",
+				postdata: "A live webinar with our guest Omolara Yeku on strategies to transition .",
+				reportCount: "3",
 			
 			},
+
+	
 
 			
 		];
 		const body = datas.map((data, index) => ({
-			Name: data.Name,
-			Email: data.Email,
+			postTofeedIMG: data.postTofeedIMG,
+			Createdby: data.Createdby,
 
-			Reportedon: data.Reportedon,
-			dreportedFor: data.dreportedFor,
+			postdata: data.postdata,
+			reportCount: data.reportCount,
 			location: data.location,
+			action: (
+				<a>
 
+<Link to="/view_group" >
+						{" "}
+						<span
+						style={{fontSize:"14px"}}
+							className="edit"
+							className="fas fa-ban mr-4 add-cursor"
+						></span>
+					</Link>
+
+				
+                          
+					<span
+					style={{fontSize:"14px"}}
+						className="del"
+					
+						className="fa fa-trash mr-4 add-cursor"
+					></span>
+
+
+
+				</a>)
 		
 		}));
 		return body;
@@ -107,23 +132,24 @@ export default class reporteddreportedFor extends Component {
 	header = () => {
 		const header = [
 			{
-				title: "Name (filterable)",
-				prop: "Name",
+				title: "Post Avatar",
+				prop: "postTofeedIMG",
 				sortable: true,
 				filterable: true,
 			},
-			{ title: "Email (filterable)", prop: "Email" ,
+			{ title: "Created By (filterable)", prop: "Createdby" ,
 			sortable: true,
 			filterable: true,},
 
-			{ title: "Reported On", prop: "Reportedon" ,
+			{ title: "Post", prop: "postdata" ,
 			},
 
-			{ title: "Rreported For", prop: "dreportedFor" ,
+			{ title: "Report Count", prop: "reportCount" ,
 			},
 
 			
-
+			{ title: "Action", prop: "action" ,
+		},
 		
 		];
 		return header;

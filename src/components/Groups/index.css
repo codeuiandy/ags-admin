@@ -344,6 +344,7 @@ color: #D5D5D5;
     font-size: 14px;
     color: #5c6287;
     font-weight: 400;
+    text-decoration: underline !important;
 }
 
 
@@ -413,6 +414,7 @@ color: #D5D5D5;
     background-color: white;
     width: 100%;
     margin-bottom: 50px;
+    margin-top: 15px;
 }
 
 .createGrpbtn8{
@@ -453,9 +455,9 @@ color: #D5D5D5;
 
 .grpActionView{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 49px;
 }
 
 .grpActionView button:nth-child(1){
@@ -465,7 +467,7 @@ color: #D5D5D5;
     color: white;
     font-weight: 600;
     border-radius: 5px;
-    width: 150px;
+   width: 113px;
     height: 45px;
 }
 
@@ -476,10 +478,13 @@ color: #D5D5D5;
     color: white;
     font-weight: 600;
     border-radius: 5px;
-    width: 150px;
+   width: 113px;
     height: 45px;
+    outline: none !important;
 }
-
+button{
+    outline: none !important;
+}
 .approveClosedGrp{
     background-color: orange;
     border: none;
@@ -526,4 +531,17 @@ width: fit-content;
 padding: 5px 10px 5px 10px;
 border-radius: 5px;
 font-weight: 600;
+}
+
+.viewgroupTitle h1{
+    font-size: 17px;
+    margin-bottom: -3px;
+    margin-top: 15px;
+    margin-left: 3px;
+    color: #334D6E;
+    text-decoration: underline;
+}
+
+.adminSelect{
+   width: 120px;
 }

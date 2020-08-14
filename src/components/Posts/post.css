@@ -3,6 +3,7 @@
     grid-template-columns: 40vw 40vw;
     width: 90vw;
    height: 300px;
+   margin-top: 15px;
 }
 
 .postChart1{
@@ -235,6 +236,7 @@ border-radius: 5px;
     width: 100%;
     margin-bottom: 30px;
     border-radius: 5px;
+    margin-top: 15px;
 }
 
 .allPostsOverview{

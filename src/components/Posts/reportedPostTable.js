@@ -9,8 +9,7 @@ export default class reportedPostTable extends Component {
             <Layout RouteUserLayout={
                 this.props.history
             } activepage="keepOpenPosts" page="reported_posts_table">
-                 <UserRoute Route="Reported" destination="Posts" />
-                 <br/>
+                 
                 <div className="reportePostTable">
                      <ReportedTable />
                 </div>

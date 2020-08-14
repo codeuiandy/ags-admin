@@ -16,7 +16,17 @@ export default class grpMembers extends Component {
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div> ,
 				posts: "81",
 			
 			},
@@ -25,7 +35,17 @@ export default class grpMembers extends Component {
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div> ,
 				posts: "81",
 			
 			},
@@ -34,28 +54,68 @@ export default class grpMembers extends Component {
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div> ,
 				posts: "81",
 			
 			},	{
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div> ,
 				posts: "81",
 			
 			},	{
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div>  ,
 				posts: "81",
 			
 			},	{
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div> ,
 				posts: "81",
 			
 			},
@@ -63,7 +123,17 @@ export default class grpMembers extends Component {
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div>  ,
 				posts: "81",
 			
 			},
@@ -71,7 +141,17 @@ export default class grpMembers extends Component {
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div>  ,
 				posts: "81",
 			
 			},
@@ -79,7 +159,17 @@ export default class grpMembers extends Component {
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin: <div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div> ,
 				posts: "81",
 			
 			},
@@ -87,7 +177,17 @@ export default class grpMembers extends Component {
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div>,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div> ,
 				posts: "81",
 			
 			},
@@ -95,7 +195,17 @@ export default class grpMembers extends Component {
                 groupname: <Link to="/user_info">Okeke Mandela</Link>,
                 userImage:<img className="userProfilePic" src={Profolepic} />,
 				joinOn: "21/12/2020",
-				admin:<div className="makeUseranAdmin"><button>Make User An Admin</button></div> ,
+				admin:  <div class="form-group">
+				<select
+			// value={}
+		// 	name="eventFee"
+		//   onChange={}
+				class="form-control adminSelect" id="exampleFormControlSelect1">
+					<option value="freeEvent">Member</option>
+				   <option value="paidEvent">Make Admin</option>
+				  
+				</select>
+			  </div>  ,
 				posts: "81",
 			
 			},
@@ -182,7 +292,7 @@ export default class grpMembers extends Component {
 			sortable: true,
 			filterable: true,},
 
-			{ title: "Upgrade User", prop: "admin" ,
+			{ title: "Role", prop: "admin" ,
 			},
 
 			{ title: "Posts", prop: "posts" ,

@@ -25,8 +25,8 @@ export default class eventList extends Component {
                 <Layout RouteUserLayout={
 					this.props.history
 				} page="event-list" activepage="keepOpenEvents">
-                
-                <div class="form-group seletEventRecent">
+              
+                <div style={{marginTop:"15px"}} class="form-group seletEventRecent">
       <select
   value={this.state.eventFee}
   name="eventDate"
