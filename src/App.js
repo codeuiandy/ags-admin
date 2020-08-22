@@ -27,6 +27,9 @@ import GroupMembers from './components/Groups/grpMembers'
 import EventOverview from "./components/Events/eventOverview";
 import AllFeeds from "./components/Posts/allFeeds";
 
+
+import Contact from './components/femiFolder/contact'
+
 function App() {
 	return (
 		<div className="App">
@@ -57,6 +60,11 @@ function App() {
 						<Route exact path="/group_members" component={GroupMembers} />
 						<Route exact path="/event_overview" component={EventOverview} />
 						<Route exact path="/all_feeds" component={AllFeeds} />
+						<Route exact path="/contacts" component={Contact} />
+
+
+
+						
 				</Switch>
 			</Router>
 		</div>

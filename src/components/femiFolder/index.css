@@ -1,0 +1,80 @@
+.contact-cards{
+    display: flex;
+    justify-content: space-between;
+    width: 55vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  margin-bottom:5px;
+}
+
+.contact-card-container{
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.wayaUserIcon{
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 25px;
+}
+
+.contact-cards-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wayaUserName{
+    margin-left: 14px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 17px;
+    color: #000000;
+}
+
+.wayaUsernumber{
+    margin-left: 15px;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 11px;
+    color: #757575
+}
+
+.wayaUseractions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wayaUseractions button{
+    background-color: orange;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.wayaUseractions button:hover{
+    animation:  moveButtonUp 100ms ease-in forwards;
+}
+
+@keyframes moveButtonUp{
+    0%{
+ transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-3px);
+           }
+}
