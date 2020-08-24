@@ -4,6 +4,10 @@ import './index.css'
 import DatePicker from "react-datepicker";
 import UserRoute from '../UserRoute/Route'
 import "react-datepicker/dist/react-datepicker.css";
+import moment from 'moment'
+import 'moment-timezone';
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer, NotificationManager} from 'react-notifications'
 export default class CreateEvent extends Component {
     constructor(props){
         super(props)
@@ -17,7 +21,7 @@ export default class CreateEvent extends Component {
             eventFee:"null",
             CTA:"Pay"
         }
-        console.log(this.state.startDate)
+        
     }
     
 
@@ -41,13 +45,73 @@ export default class CreateEvent extends Component {
         this.setState({
           eventType:"external"
         })
-      }
-    //for paid internal event it should generate a link for payment and A default CTA of Pay 
+
+        if(e === "endTime"){
+          alert(e)
+        }
       }
 
+
+      let momentStartTime =   moment(this.state.startTime).format("hh:mm:ss a")
+      let momentEndTime =   moment(this.state.endTime).format("hh:mm:ss a")
+         console.log(momentStartTime, momentEndTime)
+     
+    //for paid internal event it should generate a link for payment and A default CTA of Pay 
+
+    // if(e.target.value === "time"){
+    //  alert(5)
+    // }
+    console.log(e.target.value)
+      }
+handleEndTime=(e,EndTime)=>{
+  let momentEndTime =   moment(this.state.endTime).format("hh:mm:ss a");
+  if(this.state.startTime === momentEndTime){
+    alert(6)
+  }
+}
+
+handleEventTime= (e,startTime) =>{
+  if(e === "startTime"){
+    // let momentStartTime =   moment(startTime).format("hh:mm:ss a")
+  
+  this.setState({
+    startTime:startTime,
+    // endTime:momentStartTime,
+  })
+  }
+
+  if(e === "endTime"){
+    // let momentStartTime =   moment(startTime).format("hh:mm:ss a")
+  
+  this.setState({
+    endTime:startTime,
+    // endTime:momentStartTime,
+  })
+  }
+
+  if(this.state.endTime === this.state.startTime){
+    alert(76)
+  }
+ 
+}
+
+handleSubmit=(e)=>{
+  e.preventDefault();
+
+  let startTime = this.state.startTime
+  let endTime = this.state.endTime
+  let momentSTime =   moment(startTime).format("hh:mm:ss a");
+  let momentEndTime =   moment(endTime).format("hh:mm:ss a");
+
+  console.log(momentSTime, "....." , momentEndTime)
+  if(momentSTime === momentEndTime){
+  
+    NotificationManager.error('Opps, Event End Time Must Be Greater Than Event Start Time', 5000);
+  }
+}
 
     render() {
-      console.log(this.state.startDate)
+      const now = moment(new Date()).format("hh:mm:ss a");
         return (
             <div>
                 <Layout RouteUserLayout={
@@ -55,6 +119,7 @@ export default class CreateEvent extends Component {
 				}  page="create-event" activepage="keepOpenEvents">
                 {/* <UserRoute Route="Create" destination="Event" />
                 <br/> */}
+              
 <div style={{borderRadius:"10px"}} id="event-wraper">
     <div className="center-event-form ">
     <h1>Create Event</h1>
@@ -232,6 +297,7 @@ export default class CreateEvent extends Component {
 <div class="form-group">
     <label for="Presenter">Event Start Date</label>
     <DatePicker
+   
       closeOnScroll={true}
       selected={this.state.startDate} 
       onChange={date => this.setState({startDate:date,endDate:date})  }
@@ -245,6 +311,7 @@ export default class CreateEvent extends Component {
   <div class="form-group">
     <label for="Presenter">Event End Date</label>
       <DatePicker
+      placeholderText="Click to select a date"
       closeOnScroll={true}
       selected={this.state.endDate} 
       onChange={date => this.setState({endDate:date})  }
@@ -263,13 +330,14 @@ export default class CreateEvent extends Component {
 
     <DatePicker
       selected={this.state.startTime} 
-      onChange={date => this.setState({startTime:date,endTime:date})  } 
+      onChange={date => this.handleEventTime("startTime",date)  } 
       showTimeSelect
       showTimeSelectOnly
       timeIntervals={15}
       timeCaption="Time"
       dateFormat="h:mm aa"
-      
+      name="time"
+      // maxTime={new Date()}
     />
   </div>
 
@@ -277,14 +345,16 @@ export default class CreateEvent extends Component {
   <div class="form-group">
     <label for="Presenter">Event End Time</label>
     <DatePicker
+    style={{display:"none"}}
       selected={this.state.endTime} 
-      onChange={date => this.setState({endTime:date})  } 
+      onChange={date => this.handleEventTime("endTime",date)  }
       showTimeSelect
       showTimeSelectOnly
       timeIntervals={15}
       timeCaption="Time"
       dateFormat="h:mm aa"
-      // minDate={this.state.startTime}
+      
+ 
     />
   </div>
 </div>
@@ -302,7 +372,7 @@ export default class CreateEvent extends Component {
     
   </div>
   <div className="Esubmitbtn">
-      <button>Submit</button>
+      <button onClick={this.handleSubmit}>Submit</button>
   </div>
 </form>
     </div>

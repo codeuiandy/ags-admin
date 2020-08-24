@@ -4,7 +4,7 @@ import ImageIcon from './Vector.png'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {Images} from './selectMutipleImages'
-
+import AdvertOverview from '../Tables/allFeedsTable/adverts'
 export default class indexPost extends Component {
     constructor(props){
         super(props)
@@ -137,9 +137,12 @@ export default class indexPost extends Component {
       closeOnScroll={true}
       selected={this.state.startDate} 
       onChange={date => this.setState({startDate:date})  }
-      withPortal
- 
       minDate={new Date()}
+      showTimeSelect
+      timeFormat="HH:mm"
+      timeIntervals={15}
+      timeCaption="time"
+      dateFormat="MMMM d, yyyy h:mm aa"
     />
   </div>
 
@@ -149,9 +152,13 @@ export default class indexPost extends Component {
       closeOnScroll={true}
       selected={this.state.startDate} 
       onChange={date => this.setState({startDate:date})  }
-      withPortal
- 
+    //   withPortal
       minDate={new Date()}
+      showTimeSelect
+      timeFormat="HH:mm"
+      timeIntervals={15}
+      timeCaption="time"
+      dateFormat="MMMM d, yyyy h:mm aa"
     />
   </div>
   </div>
@@ -171,6 +178,12 @@ export default class indexPost extends Component {
      </div>
  </div>
                           </div>
+                          
+                       </div>
+
+                     
+                       <div className="adsOverview">
+ <AdvertOverview/>
                        </div>
                    </div>
                 ) : ""

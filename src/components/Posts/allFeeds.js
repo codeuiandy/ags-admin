@@ -7,6 +7,7 @@ import {Images} from './selectMutipleImages'
 import PostToFeed from '../Tables/allFeedsTable/feedToPost'
 import Icebreaker from '../Tables/allFeedsTable/icebreaker'
 import AskQuestion from '../Tables/allFeedsTable/askAQuestion'
+
 export default class allFeeds extends Component {
     constructor(props){
         super(props)
@@ -152,6 +153,7 @@ export default class allFeeds extends Component {
  </div>
                           </div>
                        </div>
+                       
                    </div>
                 ) : ""
                 }

@@ -26,11 +26,14 @@ import ViewGroup from './components/Groups/viewGroup'
 import GroupMembers from './components/Groups/grpMembers'
 import EventOverview from "./components/Events/eventOverview";
 import AllFeeds from "./components/Posts/allFeeds";
-
+import 'react-notifications/lib/notifications.css';
+import {NotificationManager,NotificationContainer} from 'react-notifications'
 function App() {
 	return (
 		<div className="App">
+			    <NotificationContainer/>
 			<Router>
+
 				{/* <ToastContainer /> */}
 				<Switch>
 					<Route exact path="/" component={Dashboard} />
