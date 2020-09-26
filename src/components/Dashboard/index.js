@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./index.css";
 import OVERVIEW from "./overview";
 import StaticticsOVERVIEW from "./staticticsOverview";
@@ -6,30 +6,37 @@ import Statictics from "./statictics";
 import Recents from "./recents";
 import Layout from '../Layout/index'
 import UserRoute from '../UserRoute/Route'
-export default class index extends Component {
-	constructor(props){
-		super(props)
-		this.state={
-		isVisible :true
-		}
-		// console.log(">>>>>", this.props.history.push("g"))
-	}
-	render() {
+import {useRecoilState} from 'recoil'
+import {UserCurrentState} from '../../GlobalState/asyncState'
+import {Modal} from '../Modals/Modal'
 
+export const Index=(props)=> {
+let [isVisible ,setIsVisible] =useState({	isVisible :true})
+
+
+
+
+		const [getUserDetails,setUserDetails] = useRecoilState(UserCurrentState)
+			console.log(">>>>using recoil state on dashboard ",getUserDetails)
+
+
+
+	
 		return (
 			<React.Fragment>
 				<Layout RouteUserLayout={
-					this.props.history
+					props.history
 				}  page="dashboard">
 			
 					
 				
-				
+					{/* <Modal/> */}
 					<OVERVIEW />
 				<div id="app">
-
+    
 						
 					<StaticticsOVERVIEW />
+				
 					<Statictics />
 				</div>
 				{/* <Recents /> */}
@@ -37,5 +44,5 @@ export default class index extends Component {
 				</Layout>
 			</React.Fragment>
 		);
-	}
-}
+	
+			}

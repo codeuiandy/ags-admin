@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import Layout from "./components/Layout/index";
-import Dashboard from "./components/Dashboard/index";
+import {Index} from "./components/Dashboard/Index";
 import CreateEvent from './components/Events/CreateEvent'
 import EventList from './components/Events/eventList'
 import ViewEvent from './components/Events/viewEvent'
@@ -27,6 +27,7 @@ import GroupMembers from './components/Groups/grpMembers'
 import EventOverview from "./components/Events/eventOverview";
 import AllFeeds from "./components/Posts/allFeeds";
 import 'react-notifications/lib/notifications.css';
+import {Login} from './components/Login/login'
 import {NotificationManager,NotificationContainer} from 'react-notifications'
 function App() {
 	return (
@@ -36,9 +37,9 @@ function App() {
 
 				{/* <ToastContainer /> */}
 				<Switch>
-					<Route exact path="/" component={Dashboard} />
+					<Route exact path="/" component={Login} />
 					{/* <Route exact path="/login" component={Login} /> */}
-						<Route exact path="/dashboard" component={Dashboard} />
+						<Route exact path="/dashboard" component={Index} />
 						<Route exact path="/create_event" component={CreateEvent} />
 						<Route exact path="/event_list" component={EventList} />
 						<Route exact path="/view_event" component={ViewEvent} />

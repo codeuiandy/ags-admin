@@ -164,7 +164,7 @@ dropDownEvent:true,
 								}} className="hoverActiveRoute"></div>
 							<li  className={`${this.props.page==="dashboard"?"activeClass":""}`}><i class="fas fa-th">
 								
-								</i><Link className={`${this.props.page==="dashboard"?"activeClass":""}`} to="/dashboard">Dashboard</Link> </li>
+								</i><Link className={` dashboardSt ${this.props.page==="dashboard"?"activeClass":""}`} to="/dashboard">Dashboard</Link> </li>
 
 								<div onClick={(e)=>this.dropDown('events')} className="hoverActiveRoute"></div>
 							<li ><i class="far fa-calendar-alt"></i> Events</li>
@@ -339,8 +339,7 @@ dropDownEvent:true,
 				  <div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
               	<li ><i class="far fa-comments"></i>Referral</li>
 
-				  <div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
-              	<li ><i class="far fa-comments"></i>Membership Gifting</li>
+				 
 
 				  <div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
               	<li ><i class="far fa-comments"></i>Resources</li>
@@ -350,6 +349,9 @@ dropDownEvent:true,
 
 							<div className="hoverActiveRoute"></div>
 							<li className={`${this.props.page==="settings"?"activeClass":""}`}><i class="fas fa-cogs"></i> Settings</li>
+
+							<div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
+              	<li ><i class="far fa-comments"></i>Membership Gifting</li>
 						</ul>
 						</Scrollbars>
 					</div>
