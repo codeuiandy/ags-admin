@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 import Layout from "./components/Layout/index";
-import {Index} from "./components/Dashboard/Index";
+import {Index} from "./components/Dashboard/index";
 import CreateEvent from './components/Events/CreateEvent'
 import EventList from './components/Events/eventList'
 import ViewEvent from './components/Events/viewEvent'
