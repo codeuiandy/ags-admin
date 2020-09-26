@@ -126,24 +126,24 @@ handleSubmit=(e)=>{
     <form className="eventForm">
   <div class="form-group">
      
-    <label for="title">Title</label>
+    <label >Title</label>
     <input type="text" class="form-control" id="title" placeholder="Enter Title"/>
   
   </div>
   <div class="form-group">
-    <label for="Presenter">Event Maximum Capacity</label>
+    <label >Event Maximum Capacity</label>
     <input type="number" class="form-control" id="Presenter" placeholder="How many people are you expecting?"/>
   </div>
 
   <div class="form-group">
-    <label for="Presenter">Description</label>
+    <label >Description</label>
     <textarea type="text" class="form-control" id="Presenter" placeholder="About Event"/>
   </div>
 
 
 
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Medium</label>
+    <label >Medium</label>
     <select
     value={this.state.eventMedium}
     name="eventMedium"
@@ -161,7 +161,7 @@ handleSubmit=(e)=>{
 {
   this.state.eventMedium === "virtual" || this.state.eventMedium === "hybrid" ? (
     <div class="form-group">
-    <label for="address">Enter Link</label>
+    <label >Enter Link</label>
     <input type="text" class="form-control" id="address" placeholder="eg https://zoom.com"/>
   </div>
   ) : ""}
@@ -170,14 +170,14 @@ handleSubmit=(e)=>{
   this.state.eventMedium === "hybrid" || this.state.eventMedium === "inperson"  ? 
   (
     <div class="form-group">
-      <label for="address">Address</label>
+      <label >Address</label>
       <input type="text" class="form-control" id="address" placeholder="Enter Event Venue"/>
     </div>   
     )
   : ""}
 
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Event Type</label>
+    <label >Event Type</label>
     <select
      value={this.state.eventType}
      name="eventType"
@@ -195,7 +195,7 @@ handleSubmit=(e)=>{
   {
     this.state.eventType === "internal" || this.state.eventType ===  "external" ?(
       <div class="form-group">
-      <label for="exampleFormControlSelect1">Is it paid or free?</label>
+      <label >Is it paid or free?</label>
       <select
   value={this.state.eventFee}
   name="eventFee"
@@ -214,14 +214,14 @@ handleSubmit=(e)=>{
     this.state.eventType === "internal" & this.state.eventFee === "freeEvent" ?(
       <div>
   <div class="form-group">
-<label for="register">CTA Button</label>
+<label >CTA Button</label>
     <input type="text" class="form-control" id="register" placeholder="e.g Register, Attend"/>
 
 
   </div>
 
         <div class="form-group">
-    <label for="register">Registration Link</label>
+    <label >Registration Link</label>
     <input type="text" class="form-control" id="register" placeholder="Event registration link"/>
 
   </div>
@@ -237,7 +237,7 @@ handleSubmit=(e)=>{
 
 
 <div class="form-group">
-    <label for="register">Event Fee</label>
+    <label >Event Fee</label>
     <input type="text" class="form-control" id="register" placeholder="$ 50,000"/>
 
   </div>
@@ -251,14 +251,14 @@ handleSubmit=(e)=>{
       <div>
 
 <div class="form-group">
-<label for="register">CTA Button</label>
+<label>CTA Button</label>
     <input type="text" class="form-control" id="register" placeholder="e.g Register, Attend"/>
 
 
   </div>
 
         <div class="form-group">
-    <label for="register">Registration Link</label>
+    <label>Registration Link</label>
     <input type="text" class="form-control" id="register" placeholder="Event registration link"/>
 
   </div>
@@ -272,19 +272,19 @@ handleSubmit=(e)=>{
       <div>
 
 <div class="form-group">
-    <label for="register">CTA Button</label>
+    <label>CTA Button</label>
     <input type="text" class="form-control" id="register" placeholder="e.g Register, Attend"/>
 
   </div>
 
         <div class="form-group">
-    <label for="register">Registration Link</label>
+    <label>Registration Link</label>
     <input type="text" class="form-control" id="register" placeholder="Event registration link"/>
 
   </div>
 
   <div class="form-group">
-    <label for="register">Event Fee</label>
+    <label>Event Fee</label>
     <input type="text" class="form-control" id="register" placeholder="$ 50,000"/>
 
   </div>
@@ -295,7 +295,7 @@ handleSubmit=(e)=>{
  
 <div className="datePickerEvent">
 <div class="form-group">
-    <label for="Presenter">Event Start Date</label>
+    <label >Event Start Date</label>
     <DatePicker
    
       closeOnScroll={true}
@@ -309,7 +309,7 @@ handleSubmit=(e)=>{
 
 
   <div class="form-group">
-    <label for="Presenter">Event End Date</label>
+    <label >Event End Date</label>
       <DatePicker
       placeholderText="Click to select a date"
       closeOnScroll={true}
@@ -326,7 +326,7 @@ handleSubmit=(e)=>{
 
 <div className="datePickerEvent">
 <div class="form-group">
-    <label for="Presenter">Event Start Time</label>
+    <label >Event Start Time</label>
 
     <DatePicker
       selected={this.state.startTime} 
@@ -343,7 +343,7 @@ handleSubmit=(e)=>{
 
 
   <div class="form-group">
-    <label for="Presenter">Event End Time</label>
+    <label >Event End Time</label>
     <DatePicker
     style={{display:"none"}}
       selected={this.state.endTime} 

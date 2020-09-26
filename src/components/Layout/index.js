@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "./Navbar";
+import {Navbar} from "./Navbar";
 import Sidebar from "./Sidebar";
 import { motion } from "framer-motion"
 export default class index extends Component {

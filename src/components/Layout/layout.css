@@ -119,23 +119,29 @@ body {
 
 }
 
+
+
 .sidebarList li {
 	margin-bottom: 17px;
 	cursor: pointer;
 	color: #334D6E;
-	font-size: 16px;
+	font-size: 14px;
 	margin-left: -35px !important;
 	list-style-type: none;
 	padding: 0;
 	
-	font-weight: 600;
+	font-weight: 500;
 	margin-bottom: 20px;
 }
 
 
+
+
+
 .sidebarList li i{
 	margin-right: 10px;
-	font-size: 15px;
+	font-size: 13px;
+	color: orange;
 }
 /* 
 .sidebarList li:first-child {
@@ -149,8 +155,30 @@ body {
 
 /* RESPONSIVENESS */
 .dropdownlist{
-	margin-left: -30px;
+	margin-left: -10px;
+	margin-bottom: 20px;
 }
+
+
+
+.dropdownlist li a{
+	cursor: pointer;
+	color: #334D6E;
+	font-size: 13px !important;
+	margin-bottom: 0 !important;
+}
+
+
+.dropdownlist li {
+	cursor: pointer;
+	color: #334D6E;
+	font-size: 13px !important;
+	margin-bottom: 7px !important;
+}
+
+
+
+
 @media (min-width: 1025px) {
 	.togMenu {
 		display: none;
@@ -228,6 +256,11 @@ body {
 
 .activeClass{
 	color: orange !important;
+	margin-bottom: 17px;
+	cursor: pointer;
+	color: #334D6E;
+	font-size: 14px;
+	margin-bottom: 20px;
 }
 
 .hoverActiveRoute{
@@ -239,7 +272,12 @@ body {
 	display: block;
 	z-index: 12;
 cursor: pointer;
+font-size: 14px;
 }
+
+.hoverActiveRoute li{
+	font-size: 14px;
+} 
 
 
 .hoverActiveRoute:hover::after{
