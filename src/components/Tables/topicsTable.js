@@ -1,166 +1,68 @@
-import React, { Component } from "react";
-
+import React, { useState } from "react";
+import {useRecoilState} from 'recoil'
+import {delet_edit_Handle} from '../../GlobalState/localState'
 import Table from "./customTable";
 import { Link } from "react-router-dom";
 
-export default class topicsTable extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
 
-	bodyRow = () => {
-		const datas = [
-
-			{
-				topicName: <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				posts: "81",
-			followers:"340"
-			},
-
-			{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				posts: "81",
-				followers:"340"
-			},
-
-			{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: "Close",
-				posts: "81",
-				followers:"340"
-			},	{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: "Close",
-				posts: "81",
-				followers:"340"
-			
-			},	{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				posts: "81",
-				followers:"340"
-			},	{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: "Close",
-				posts: "81",
-				followers:"340"
-			},
-			{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				posts: "81",
-				followers:"340"
-			},
-			{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				posts: "81",
-				followers:"340"
-			},
-			{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				posts: "81",
-				followers:"340"
-			},
-			{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				posts: "81",
-				followers:"340"
-			},
-			{
-				topicName:  <Link to="">Technology</Link>,
-				Createdby: "Nwachukwu Davis",
-				posts: "81",
-				followers:"340"
-			},
-
-		{	action: (
-				<a>
-
-<Link >
-						{" "}
-						<span
-						style={{fontSize:"14px"}}
-							className="edit"
-							className="fas fa-eye mr-4 add-cursor"
-						></span>
-					</Link>
-
-				
-                          
-					<span
-					style={{fontSize:"14px"}}
-						className="del"
-					
-						className="fa fa-trash mr-4 add-cursor"
-					></span>
+export const TopicsTable =(props)=> {
+	
+let [getDeletDetails, setDeletDetails] = useRecoilState(delet_edit_Handle)
 
 
 
-				</a>)}
 
-			
-		];
-		const body = datas.map((data, index) => ({
-			topicName: data.topicName,
-			Createdby: data.Createdby,
-
-			openORclsoe: data.openORclsoe,
-			posts: data.posts,
-			location: data.location,
-			followers:data.followers,
+const	bodyRow = () => {
+		
+		const body = props.getTopic === null ? [] : props.getTopic.map((data, index) => (console.log("data...",data),{
+			title:data.title,
+			followers:data.followers.length,
+			description:data.description === null || data.description === undefined || data.description == "" ? "No description added": data.description,
 			action: (
 				<a>
 
-<Link to="" >
+<Link to="/create_topic" >
 						{" "}
 						<span
+						
+						onClick={()=>console.log(setDeletDetails({...getDeletDetails,edit_id:data.id,edit_data:data,edit_content:true}))}
 						style={{fontSize:"14px"}}
 							className="edit"
-							className="fas fa-edit mr-4 add-cursor"
+							className="fas fa-pen mr-4 add-cursor"
 						></span>
 					</Link>
 
 				
                           
 					<span
+						onClick={()=>console.log(setDeletDetails({...getDeletDetails,delete_id:data.id,delete_url:"topics"}))}
+					type="button" 
+					 data-toggle="modal"
+					  data-target="#deleteModal"
 					style={{fontSize:"14px"}}
-						className="del"
-					
 						className="fa fa-trash mr-4 add-cursor"
 					></span>
 
 
 
 				</a>)
-		
 		}));
 		return body;
 	};
 
-	header = () => {
+const	header = () => {
 		const header = [
 			{
 				title: "Title (filterable)",
-				prop: "topicName",
+				prop: "title",
 				sortable: true,
 				filterable: true,
 			},
-			{ title: "Created By (filterable)", prop: "Createdby" ,
-			sortable: true,
-			filterable: true,},
+		
 
 			
 
-			{ title: "Posts", prop: "posts" ,
+			{ title: "Description", prop: "description" ,
 			},
 
 			{ title: "Followers", prop: "followers" ,
@@ -174,16 +76,17 @@ export default class topicsTable extends Component {
 		return header;
 	};
 
-	render() {
+
+	
 		return (
 			<div className="table-responsivee">
 				<Table
-					body={this.bodyRow}
-					head={this.header}
+					body={bodyRow}
+					head={header}
 					rowsPerPage={10}
 					rowsPerPageOption={[10, 15, 20, 25]}
 				/>
 			</div>
 		);
 	}
-}
+

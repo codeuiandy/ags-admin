@@ -351,6 +351,9 @@ dropDownEvent:true,
 							<li className={`${this.props.page==="settings"?"activeClass":""}`}><i class="fas fa-cogs"></i> Settings</li>
 
 							<div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
+              	<li ><i class="far fa-comments"></i>Opportunity Cost</li>
+
+							<div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
               	<li ><i class="far fa-comments"></i>Membership Gifting</li>
 						</ul>
 						</Scrollbars>
