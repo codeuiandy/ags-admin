@@ -1,175 +1,77 @@
-import React, { Component } from "react";
-
+import React, { useState } from "react";
+import {useRecoilState} from 'recoil'
+import {delet_edit_Handle} from '../../GlobalState/localState'
 import Table from "./customTable";
 import { Link } from "react-router-dom";
 
-export default class GroupTable extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
 
-	bodyRow = () => {
-		const datas = [
-
-			{
-				groupname: <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "81",
-			
-			},
-
-			{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "81",
-			
-			},
-
-			{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: "Close",
-				posts: "81",
-			
-			},	{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: "Close",
-				posts: "81",
-			
-			},	{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "81",
-			
-			},	{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: "Close",
-				posts: "81",
-			
-			},
-			{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "81",
-			
-			},
-			{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "81",
-			
-			},
-			{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "81",
-			
-			},
-			{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe:<a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "81",
-			
-			},
-			{
-				groupname:  <Link to="/view_group">Making Moves Like A Star</Link>,
-				Createdby: "Nwachukwu Davis",
-				openORclsoe: <a style={{color:"#2ED47A",fontWeight:"400"}}>Open</a>,
-				posts: "81",
-			
-			},
-
-		{	action: (
-				<a>
-
-<Link >
-						{" "}
-						<span
-						style={{fontSize:"14px"}}
-							className="edit"
-							className="fas fa-eye mr-4 add-cursor"
-						></span>
-					</Link>
-
-				
-                          
-					<span
-					style={{fontSize:"14px"}}
-						className="del"
-					
-						className="fa fa-trash mr-4 add-cursor"
-					></span>
+export const GroupTable =(props)=> {
+	
+let [getDeletDetails, setDeletDetails] = useRecoilState(delet_edit_Handle)
 
 
 
-				</a>)}
 
-			
-		];
-		const body = datas.map((data, index) => ({
-			groupname: data.groupname,
-			Createdby: data.Createdby,
-
-			openORclsoe: data.openORclsoe,
-			posts: data.posts,
-			location: data.location,
+const	bodyRow = () => {
+		
+		const body = props.getGroup === null ? [] : props.getGroup.map((data, index) => (console.log("data...",data),{
+			title:data.name,
+			Members:data.members_count,
+			closed:data.closed === true ?"Closed Group": "Open Group",
+			description:data.description === null || data.description === undefined || data.description == "" ? "No description added": data.description,
 			action: (
 				<a>
 
-<Link to="/view_group" >
+<Link to="/create_group_edit_group" >
 						{" "}
 						<span
+						
+						onClick={()=>setDeletDetails({edit_id:data.id,edit_data:data,usedbyGroupsPage:true})}
 						style={{fontSize:"14px"}}
 							className="edit"
-							className="fas fa-edit mr-4 add-cursor"
+							className="fas fa-pen mr-4 add-cursor"
 						></span>
 					</Link>
 
 				
                           
 					<span
+						onClick={()=>setDeletDetails({...getDeletDetails,delete_id:data.id,delete_url:"groups"})}
+					type="button" 
+					 data-toggle="modal"
+					  data-target="#deleteModal"
 					style={{fontSize:"14px"}}
-						className="del"
-					
 						className="fa fa-trash mr-4 add-cursor"
 					></span>
 
 
 
 				</a>)
-		
 		}));
 		return body;
 	};
 
-	header = () => {
+const	header = () => {
 		const header = [
 			{
-				title: "Group Name (filterable)",
-				prop: "groupname",
+				title: "Title (filterable)",
+				prop: "title",
 				sortable: true,
 				filterable: true,
 			},
-			{ title: "Created By (filterable)", prop: "Createdby" ,
-			sortable: true,
-			filterable: true,},
+		
 
-			{ title: "Open/Close ", prop: "openORclsoe" ,
+			
+
+			{ title: "Description", prop: "description" ,
 			},
 
-			{ title: "Posts", prop: "posts" ,
-			},
+			{ title: "Members", prop: "Members" ,
+		},
+			
 
+		{ title: "Open/Close", prop: "closed" ,
+	},
 			
 			{ title: "Action", prop: "action" ,
 		},
@@ -178,16 +80,17 @@ export default class GroupTable extends Component {
 		return header;
 	};
 
-	render() {
+
+	
 		return (
 			<div className="table-responsivee">
 				<Table
-					body={this.bodyRow}
-					head={this.header}
+					body={bodyRow}
+					head={header}
 					rowsPerPage={10}
 					rowsPerPageOption={[10, 15, 20, 25]}
 				/>
 			</div>
 		);
 	}
-}
+

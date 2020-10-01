@@ -25,7 +25,7 @@ const	bodyRow = () => {
 						{" "}
 						<span
 						
-						onClick={()=>console.log(setDeletDetails({...getDeletDetails,edit_id:data.id,edit_data:data,edit_content:true}))}
+						onClick={()=>setDeletDetails({edit_id:data.id,edit_data:data,edit_content:true})}
 						style={{fontSize:"14px"}}
 							className="edit"
 							className="fas fa-pen mr-4 add-cursor"
@@ -35,7 +35,7 @@ const	bodyRow = () => {
 				
                           
 					<span
-						onClick={()=>console.log(setDeletDetails({...getDeletDetails,delete_id:data.id,delete_url:"topics"}))}
+						onClick={()=>setDeletDetails({...getDeletDetails,delete_id:data.id,delete_url:"topics"})}
 					type="button" 
 					 data-toggle="modal"
 					  data-target="#deleteModal"

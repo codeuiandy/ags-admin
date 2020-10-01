@@ -71,9 +71,9 @@ export const httpGet = async (url) => {
 	}
 };
 
-export const httpPatch = async (url, postBody) => {
+export const httpPut = async (url, postBody) => {
 	try {
-		const res = await axios.patch(`${baseUrl}${url}`, postBody, {
+		const res = await axios.put(`${baseUrl}${url}`, postBody, {
 			headers: { Authorization: `JWT ${localStorage.api_token}` },
 		});
 		console.log(res)
@@ -83,6 +83,52 @@ export const httpPatch = async (url, postBody) => {
 		return error;
 	}
 };
+
+
+
+
+// export const httpPatch = async (url, postBody) => {
+// 	try {
+// 		const res = await axios.patch(`${baseUrl}${url}`, postBody, {
+// 			headers: { Authorization: `JWT ${localStorage.api_token}` },
+// 		});
+// 		console.log(res)
+// 		return res;
+// 	} catch (error) {
+// 		hideLoader();
+// 		return error;
+// 	}
+// };
+
+
+
+export const httpPatch = async (url, postBody) => {
+	try {
+		const res = await axios.patch(`${baseUrl}${url}`, postBody, {
+			headers: { Authorization: `JWT ${localStorage.api_token}` },
+		});
+		return res;
+	} catch (error) {
+		// if (error.response.data.code === 401 && error.response.data.message === 'Unauthorized, Your token is invalid or expired') {
+		// 	NotificationManager.error(
+		// 		error.response.data.message || "Something went wrong. Please retry.",
+		// 		"Oops!",
+		// 		3000
+		// 	);
+		// 	window.location.href = '/logout';
+		// 	hideLoader();
+		// }
+		// NotificationManager.error(
+		// 	error.response.data.message || "Something went wrong. Please retry.",
+		// 	"Oops!",
+		// 	3000
+		// );
+		// hideLoader();
+		return error;
+	}
+};
+
+
 
 export const httpDelete = async (url, postBody) => {
 	try {

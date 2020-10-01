@@ -13,7 +13,7 @@ export default class topicsOverview extends Component {
                
            
               <div className="createGrpbtn8">
-                  <button> <Link to="/create_topic">Create Topic</Link></button>
+                  <button> <Link to="/create_topic_edit_topic">Create Topic</Link></button>
               </div>
                 <div className="grp-overview">
     <div className="grp-overview1">

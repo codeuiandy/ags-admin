@@ -8,10 +8,10 @@ import CreateEvent from './components/Events/CreateEvent'
 import EventList from './components/Events/eventList'
 import ViewEvent from './components/Events/viewEvent'
 import Group from './components/Groups/group'
-import AllGroup from './components/Groups/allGroups'
+import {AllGroups} from './components/Groups/allGroups'
 import './App.css'
 import Plans from './components/Plan/overview'
-import CreateGRP from './components/Groups/createGroup'
+import {CreateGroup} from './components/Groups/createGroup'
 import PostsOverview from './components/Posts/overview'
 import CreatePosts from './components/Posts/indexPost'
 import ReportedPostsTable from './components/Posts/reportedPostTable'
@@ -44,14 +44,14 @@ function App() {
 						<Route exact path="/event_list" component={EventList} />
 						<Route exact path="/view_event" component={ViewEvent} />
 						<Route exact path="/groups" component={Group} />
-						<Route exact path="/create_group" component={CreateGRP} />
-						<Route exact path="/all_groups" component={AllGroup} />
+						<Route exact path="/create_group_edit_group" component={CreateGroup} />
+						<Route exact path="/all_groups" component={AllGroups} />
 						<Route exact path="/plans" component={Plans} />
 						<Route exact path="/posts-overview" component={PostsOverview} />
 						<Route exact path="/create_posts" component={CreatePosts} />
 						<Route exact path="/reported_posts_table" component={ReportedPostsTable} />
 						<Route exact path="/topic_overview" component={TopicsOverview} />
-						<Route exact path="/create_topic" component={CreateTopics} />
+						<Route exact path="/create_topic_edit_topic" component={CreateTopics} />
 						<Route exact path="/all_topics" component={AllTopicsData} />
 						<Route exact path="/user-overview" component={UsersOverView} />
 						<Route exact path="/all_users" component={Allusers} />
