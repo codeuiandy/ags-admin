@@ -13,7 +13,7 @@ export default class group extends Component {
      
              
               <div className="createGrpbtn8">
-                  <button> <Link to="/create_group">Create Group</Link></button>
+                  <button> <Link to="/create_group_edit_group">Create Group</Link></button>
               </div>
                 <div className="grp-overview">
     <div className="grp-overview1">

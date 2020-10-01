@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {httpPost} from '../helpers/httpMethods'
+import {LoginhttpPost} from '../helpers/httpMethods'
 import {ValidateEmail} from '../helpers/emailAuth'
 import {ValidateEmptyString} from '../helpers/emptyString'
 import Tilt from 'react-tilt'
@@ -45,7 +45,7 @@ console.log(loginDetails.email)
 		const data = loginDetails;
 		showLoader()
     try {
-		const res =	await httpPost("login/",data)
+		const res =	await LoginhttpPost("login/",data)
 		
 			console.log(res)
 				setToken(res.token)

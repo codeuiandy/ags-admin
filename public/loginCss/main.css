@@ -89,9 +89,18 @@ textarea {
   outline: none;
   border: none;
 }
+input{
+  padding-left: 10px;
+}
+
+textarea, input {
+
+  border-radius: 5px;
+}
 
 textarea:focus, input:focus {
-  border-color: transparent !important;
+  border-color: #857653ce !important;
+
 }
 
 input:focus::-webkit-input-placeholder { color:transparent; }

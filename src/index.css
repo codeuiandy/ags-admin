@@ -40,3 +40,15 @@ textarea
   min-width: 70vw !important;
 }
 
+
+.previewImgData{
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+/* .table-responsivee{
+  background: white;
+    padding: 31px;
+    border-radius: 5px;
+} */

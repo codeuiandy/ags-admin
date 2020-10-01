@@ -219,12 +219,17 @@ dropDownEvent:true,
 									Group Overview</Link></li>
 
 									<div onClick={()=>{
-									this.props.RouteUserLayout.push("/all_groups")
+									this.props.RouteUserLayout.push("/create_group_edit_group")
 								}} className="hoverActiveRoute"></div>
+	<li className={`${this.props.page==="event-list"?"activeClass":""}`}> <Link 
+								className={`${this.props.page==="all_groups"?"activeClass":""}`} to="/create_group_edit_group">
+							Create Group</Link></li>
 
 								<li className={`${this.props.page==="event-list"?"activeClass":""}`}> <Link 
 								className={`${this.props.page==="all_groups"?"activeClass":""}`} to="/all_groups">
 									Groups</Link></li>
+
+									
 							</ul>
 							:""}
 
@@ -283,11 +288,11 @@ dropDownEvent:true,
 									Overview</Link></li>
 
 									<div onClick={()=>{
-									this.props.RouteUserLayout.push("/create_topic")
+									this.props.RouteUserLayout.push("/create_topic_edit_topic")
 								}} className="hoverActiveRoute"></div>
 
 								<li className={`${this.props.page==="create_topic"?"activeClass":""}`}> <Link 
-								className={`${this.props.page==="create_topic"?"activeClass":""}`} to="/create_topic">
+								className={`${this.props.page==="create_topic"?"activeClass":""}`} to="/create_topic_edit_topic">
 									Create Topic</Link></li>
 
 									<div onClick={()=>{
@@ -349,6 +354,9 @@ dropDownEvent:true,
 
 							<div className="hoverActiveRoute"></div>
 							<li className={`${this.props.page==="settings"?"activeClass":""}`}><i class="fas fa-cogs"></i> Settings</li>
+
+							<div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
+              	<li ><i class="far fa-comments"></i>Opportunity Cost</li>
 
 							<div className={`${this.props.page==="chats"?"activeClass":""}`} className="hoverActiveRoute"></div>
               	<li ><i class="far fa-comments"></i>Membership Gifting</li>
